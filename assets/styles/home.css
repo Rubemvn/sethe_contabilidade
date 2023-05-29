@@ -1,74 +1,169 @@
 :root {
-    --color01: #024899;
-    --color02: #ffffff;
-    --color03: #073447;
+    --color01: #ffffff;
+    --color01_01: #ffffff81;
+    --color02: #073447;
+    --color03: #6dd1ad;
+    --color03_01: #6dd1acc7;
+    --color04: #c5ffe9;
+    --color05: #000000;
 }
 
 * {
-    height: 200%;
-    width: 100%;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
 
+html {
+    /* a cada 1rem será considerado 10px */
+    font-size: 62.5%;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    background-color: var(--color02);
-
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    height: 200vh;
 }
 
-.container {
+content{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 850px;
-    height: min-content;
-    text-justify: center;
-    margin-bottom: 200px;
-    margin-top: 50px;
+}
+
+/* NavBar */
+.navBar {
+    background-color: #073447;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+
+.logo,
+.linksNavBar {
+    text-decoration: none;
+    color: var(--color01);
+    transition: all .2s ease-in-out;
+}
+
+.linksNavBar:hover {
+    text-decoration: none;
+    color: var(--color01_01);
+}
+
+.navBarContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1400px;
+    color: var(--color01);
+}
+
+
+.navBarContent a {
+    font-size: 1.6rem;
+}
+
+.navBarContent ul {
+    display: flex;
+    gap: 40px;
+}
+
+.navBarContent ul li {
+    list-style: none;
+}
+
+.contact {
+    text-decoration: none;
     background-color: var(--color03);
-    padding: 20px;
-    -webkit-box-shadow: 7px 21px 40px -3px rgba(0, 0, 0, 0.33);
-    -moz-box-shadow: 7px 21px 40px -3px rgba(0, 0, 0, 0.33);
-    box-shadow: 7px 21px 40px -3px rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: var(--color05);
+    transition: all .2s ease-in-out;
 }
 
-.container h1 {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    color: var(--color02);
-    font-family: 'Roboto';
+.contact:hover {
+    background-color: var(--color03_01);
 }
 
-.title {
-    height: 400px;
+/* NavBar END */
+
+/* Scroll ballon */
+.scrollBallon {
+    position: fixed;
+    bottom: 130px;
+    right: 35px;
+    background-color: var(--color02);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 12px 13px 14px 13px;
+    
+    transition: all .2s ease-in-out;
 }
 
-#imagem {
-    height: 300px;
-    display: flex;
-    transition: all 300ms ease;
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 22px solid var(--color03);
 }
 
-#imagem:hover {
-
+.scrollBallon:hover {
     scale: 1.05;
 }
+/* Scroll ballon END*/
 
-.bolinha {
-    background-color: green;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+/* WhatsApp Ballon */
+.whatsAppBalloon {
     position: fixed;
-    right: 50px;
-    bottom: 50px;
-    -webkit-box-shadow: 7px 21px 40px -3px rgba(0, 0, 0, 0.33);
-    -moz-box-shadow: 7px 21px 40px -3px rgba(0, 0, 0, 0.33);
-    box-shadow: 7px 21px 40px -3px rgba(0, 0, 0, 0.5);
+    right: 20px;
+    bottom: 30px;
+    background-color: var(--color03);
+    padding: 10px;
+    border-radius: 50% 50% 50% 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    -webkit-box-shadow: 0px 25px 33px -15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 25px 33px -15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 25px 33px -15px rgba(0, 0, 0, 0.4);
+    transition: all .2s ease-in-out;
 }
+
+.whatsAppBalloon:hover{
+    scale: 1.05;
+}
+/* WhatsApp Ballon END*/
+
+/* main */
+main{
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* greetings Section */
+.greetingsSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+/* greetings Section END*/
+/* main END*/
