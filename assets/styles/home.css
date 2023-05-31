@@ -33,7 +33,7 @@ body {
 
 /* NavBar */
 .navBar {
-    background-color: #073447;
+    background-color: var(--color01);
     width: 100%;
     height: 80px;
     display: flex;
@@ -42,22 +42,22 @@ body {
     position: fixed;
     top: 0;
 
-    -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
 }
 
 
 .logo,
 .linksNavBar {
     text-decoration: none;
-    color: var(--color01);
+    color: var(--color02);
     transition: all .2s ease-in-out;
 }
 
 .linksNavBar:hover {
     text-decoration: none;
-    color: var(--color01_01);
+    color: var(--color02);
 }
 
 .navBarContent {
@@ -94,7 +94,7 @@ body {
     transition: all .2s ease-in-out;
     border: none;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .buttonContact:hover,
@@ -222,6 +222,7 @@ main {
 
 .button2:hover {
     border-color: var(--color03_01);
+    font-weight: 600;
 }
 
 /* greetings Section END*/
@@ -263,7 +264,7 @@ main {
 }
 
 
-.squareTest{
+.squareTest {
     width: 250px;
     height: 250px;
     border-radius: 30px;
