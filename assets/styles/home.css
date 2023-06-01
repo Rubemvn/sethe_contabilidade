@@ -4,8 +4,9 @@
     --color02: #073447;
     --color03: #6dd1ad;
     --color03_01: #6dd1acc7;
+    --color03_02: #165b42;
     --color04: #c5ffe9;
-    --color05: #000000;
+    --color05: #e5e5e5;
 }
 
 * {
@@ -24,12 +25,12 @@ body {
     font-weight: 600;
 }
 
-.content {
+/* .content {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* NavBar */
 .navBar {
@@ -159,12 +160,11 @@ body {
 /* main */
 main {
     width: 100%;
-    max-width: 1400px;
+    /* max-width: 1400px; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 5%;
 }
 
 /* greetings Section */
@@ -173,6 +173,8 @@ main {
     justify-content: space-between;
     align-items: center;
     height: 100vh;
+    max-width: 1400px;
+    padding: 0 5%;
 }
 
 .initialGreetings {
@@ -230,19 +232,19 @@ main {
 /* AboutUs */
 .aboutUs {
     display: flex;
-    text-align: center;
-    flex-direction: column;
-    background-color: var(--color04);
-    box-sizing: border-box;
-    padding: 5%;
-    border-radius: 40px;
-    margin-bottom: 90px;
-
-    -webkit-box-shadow: 0px 25px 33px -11px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 25px 33px -11px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 25px 33px -11px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    background-color: var(--color05);
+    margin-bottom: 100px;
+    width: 100%;
 }
 
+.contentAboutUs {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 5%;
+    max-width: 1400px;
+}
 
 .aboutUs h1 {
     font-size: 5rem;
@@ -253,7 +255,7 @@ main {
 .aboutUs p {
     font-size: 1.8rem;
     color: var(--color02);
-    padding: 0 5% 5% 5%;
+    padding: 0 10% 5% 10%;
 }
 
 .aboutUs div {
@@ -274,3 +276,21 @@ main {
 /* AboutUs END */
 
 /* main END*/
+
+/* footer */
+footer{
+    background-color: var(--color03);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70px;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--color03_02);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+/* footer END*/
