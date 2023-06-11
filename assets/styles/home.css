@@ -76,7 +76,6 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 5%;
     max-width: 1500px;
     color: var(--color01);
 }
@@ -191,11 +190,10 @@ main {
 /* greetings Section */
 .greetingsSection {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 100vh;
     max-width: 1500px;
-    padding: 0 5%;
 }
 
 .initialGreetings {
@@ -260,7 +258,7 @@ main {
     display: flex;
     text-align: center;
     flex-direction: column;
-    padding: 5%;
+    padding: 5% 0;
     max-width: 1500px;
 }
 
@@ -274,12 +272,12 @@ main {
     text-align: justify;
     font-size: 1.8rem;
     color: var(--color01);
-    padding: 0 10% 5% 10%;
+    padding: 0 0 5% 0;
 }
 
 .owners {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -311,7 +309,6 @@ main {
     align-items: center;
     flex-direction: column;
     max-width: 1500px;
-    padding: 0 5%;
 }
 
 .contentPartners h2 {
@@ -331,9 +328,9 @@ main {
 
 .contentPartnersFeedback {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-around;
     align-items: center;
-    gap: 70px;
     margin-bottom: 100px;
 }
 
@@ -364,7 +361,7 @@ main {
 .carousel {
     position: relative;
     padding: 15px;
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     margin-bottom: 100px;
 
@@ -442,12 +439,16 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     padding: 50px 0;
 }
 
 .contentFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1500px;
-    padding: 0 5%;
+    width: 100%;
 }
 
 .descriptionFooter p {
