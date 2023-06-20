@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sethe Contabilidade</title>
-  <link rel="stylesheet" href="./assets/styles/home.css">
+  <link rel="stylesheet" href="./assets/styles/home/home.css">
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,13 +21,18 @@
   <nav class="navBar">
     <div class="navBarContent">
       <a class="logo" href="#">SETHE</a>
+      
+      <div class="menuToggle">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+
       <ul class="menu">
-        <li><a class="linksNavBar" href="#">Início</a></li>
-        <li><a class="linksNavBar" href="#aboutUs">Sobre nós</a></li>
-        <li><a class="linksNavBar" href="#">Contato</a></li>
-        <li>
-          <a class="contact" href="#">Agende uma reunião</a>
-        </li>
+        <li><a class="linksNavBar" onclick="closeMenuToggle()" href="#">Início</a></li>
+        <li><a class="linksNavBar" onclick="closeMenuToggle()" href="#aboutUs">Sobre nós</a></li>
+        <li><a class="linksNavBar" onclick="closeMenuToggle()" href="#">Contato</a></li>
+        <li><a class="contact" onclick="closeMenuToggle()" href="#">Agende uma reunião</a></li>
       </ul>
     </div>
   </nav>
@@ -38,11 +43,11 @@
     <div class="arrow"></div>
   </div>
   <!-- WhatsApp ballon -->
-  <div class="whatsAppBalloon">
+  <!-- <div class="whatsAppBalloon">
     <a href="https://api.whatsapp.com/message/BKKMPTDG2BFWE1?autoload=1&app_absent=0" target="_blank">
       <img width="60" height="60" src="./assets/images/icons/icons8-whatsapp-60.png" alt="whatsapp" />
     </a>
-  </div>
+  </div> -->
   <!-- Scroll balloon  END-->
 
 
@@ -52,8 +57,7 @@
       <div class="initialGreetings">
 
         <h1>É simples<br> É sethe!</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
 
         <div class="greetingsButtons">
@@ -62,7 +66,7 @@
         </div>
       </div>
 
-      <img class="img" src="./assets/images/others/greetingIMG.png" alt="">
+      <img class="greetingImg" src="./assets/images/others/greetingIMG.png" alt="">
     </section>
     <!-- Section with initial greetings END-->
 
@@ -75,9 +79,6 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lorem sem, rhoncus non porttitor in, auctor
           non tellus. Aenean rutrum dictum sapien nec imperdiet. Duis pharetra posuere turpis, vitae lobortis ipsum
           nibus sit amet.
-          Praesent semper est magna, vel sollicitudin quam luctus et. Morbi in viverra velit. Sed non risus mauris.
-          Mauris
-          eleifend lorem tortor, eu condimentum orci laoreet ut. Praesent accumsan enim nisi, ut vulputate augue mattis
           nec. <br><br>
           Phasellus eros est, sollicitudin ut tristique non, semper vitae magna. Integer non porta lectus. In accumsan
           tristique leo. Donec aliquam, justo ut porta ultrices, magna libero condimentum urna, non sagittis leo purus
@@ -86,10 +87,6 @@
           tortor. Mauris
           laoreet ut urna ut sodales. Etiam congue, sapien ut ultricies ultrices, leo metus tristique sem, in vulputate
           arcu elit sed erat.
-          Praesent ultricies ac ipsum sit amet dignissim. Praesent et faucibus risus, id ornare sem. Proin semper quam
-          egestas, euismod
-          odio in, viverra risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-          curae; Nullam eget sollicitudin
         </p>
         <div class="owners">
           <div class="owner">
@@ -212,6 +209,7 @@
     </div>
   </footer>
 
+  <script src="./assets/scripts/menu.js"></script>
   <script src="./assets/scripts/script.js"></script>
 </body>
 
