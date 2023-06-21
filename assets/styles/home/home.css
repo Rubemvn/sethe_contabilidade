@@ -610,7 +610,7 @@ footer {
     position: absolute;
     top: 15px;
     right: 0;
-    margin-right: calc(10% + 11px);
+    margin-right: 10%;
   }
   
   .menuSection.on .menuToggle .one {
