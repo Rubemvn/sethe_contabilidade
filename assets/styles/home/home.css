@@ -165,6 +165,7 @@ main {
   justify-content: space-around;
   align-items: center;
   height: 100vh;
+  min-height: 660px;
   max-width: var(--generalWidth);
   width: 100%;
 }
@@ -441,8 +442,7 @@ footer {
 
 /* MEDIA SCREEN */
 
-/* 1920 */
-
+/* 1800 */
 @media screen and (max-width: 1800px) {
   :root {
     --generalWidth: 1300px;
@@ -457,6 +457,7 @@ footer {
   }
 }
 
+/* 1440> */
 @media screen and (max-width: 1440px) {
   :root {
     --generalWidth: 1000px;
@@ -474,9 +475,10 @@ footer {
   }
 }
 
+/* 1220> */
 @media screen and (max-width: 1220px) {
   :root {
-    --generalWidth: 800px;
+    --generalWidth: 850px;
   }
 
   .initialGreetings {
@@ -484,7 +486,7 @@ footer {
   }
 
   .greetingImg {
-    width: 450px;
+    width: 500px;
   }
 
   .contentPartnersFeedback {
@@ -493,10 +495,6 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
-  :root {
-    --generalWidth: 800px;
-  }
-
   .owners {
     justify-content: space-between;
   }
