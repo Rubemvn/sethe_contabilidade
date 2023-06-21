@@ -5,7 +5,7 @@
   --color03_01: #6dd1acc7;
   --color04: #c5ffe9;
   --color05: #03b093;
-  --generalWidth: 2000px;
+  --generalWidth: 1500px;
 }
 
 * {
@@ -28,7 +28,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 11px;
 }
 
 body::-webkit-scrollbar-track {
@@ -38,7 +38,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: var(--color02);
   border-radius: 20px;
-  border: 3px solid var(--color01);
+  border: 2px solid var(--color01);
 }
 
 
@@ -59,6 +59,20 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
 }
 
+.navBarContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1500px;
+  color: var(--color01);
+  margin: 0 10%;
+}
+
+
+.navBarContent a {
+  font-size: 1.6rem;
+}
 
 .logo,
 .linksNavBar {
@@ -72,27 +86,11 @@ body::-webkit-scrollbar-thumb {
   color: var(--color02);
 }
 
-.navBarContent {
+.menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: var(--generalWidth);
-  color: var(--color01);
-}
-
-
-.navBarContent a {
-  font-size: 1.6rem;
-}
-
-.navBarContent ul {
-  display: flex;
   gap: 40px;
-}
-
-.navBarContent ul li {
-  list-style: none;
 }
 
 .buttonContact,
@@ -152,37 +150,9 @@ body::-webkit-scrollbar-thumb {
 
 /* Scroll ballon END*/
 
-/* WhatsApp Ballon */
-/* .whatsAppBalloon {
-  position: fixed;
-  right: 20px;
-  bottom: 30px;
-  background-color: var(--color02);
-  padding: 10px;
-  border-radius: 50% 50% 50% 20%;
-  border: 3px solid var(--color03);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  -webkit-box-shadow: 0px 25px 33px -15px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 25px 33px -15px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 25px 33px -15px rgba(0, 0, 0, 0.4);
-  transition: all .35s ease-in-out;
-}
-
-.whatsAppBalloon:hover {
-  scale: 1.05;
-  border: 3px solid var(--color02);
-  background-color: var(--color03);
-} */
-
-/* WhatsApp Ballon END */
-
 /* main */
 main {
   width: 100%;
-  /* max-width: var(--generalWidth); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,7 +162,7 @@ main {
 /* greetings Section */
 .greetingsSection {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 100vh;
   max-width: var(--generalWidth);
@@ -283,6 +253,7 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 
 .owner img {
@@ -471,16 +442,6 @@ footer {
 /* MEDIA SCREEN */
 
 /* 1920 */
-@media screen and (max-width: 2150px) {
-
-  :root {
-    --generalWidth: 1500px;
-  }
-
-  .greetingImg {
-    width: 600px;
-  }
-}
 
 @media screen and (max-width: 1800px) {
   :root {
@@ -535,14 +496,15 @@ footer {
   :root {
     --generalWidth: 800px;
   }
-  
+
   .owners {
     justify-content: space-between;
   }
-  
+
   .owner {
     scale: .85;
   }
+
   .contentPartnersFeedback {
     width: 80%;
   }
@@ -582,15 +544,95 @@ footer {
   .partnerFeedback {
     scale: 0.9;
   }
-  
+
   .item {
     max-height: 120px;
     max-width: 120px;
   }
+
+  /* MENU TOGGLE */
+
+  .menu {
+    display: none;
+  }
+
+  .menuToggle {
+    width: 37px;
+    height: 37px;
+    margin-right: 10%;
+  }
+  
+  .one,
+  .two,
+  .three {
+    background-color: var(--color02);
+    height: 3px;
+    width: 100%;
+    margin: 9px auto;
+    
+    transition-duration: .35s;
+  }
+  
+  /* Clicado */
+  
+  .menuSection.on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: #ffffff52;
+    backdrop-filter: blur(7px);
+    
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in;
+  }
+
+  .menuSection.on .menu {
+    display: block;
+    text-align: center;
+    margin-bottom: 150px;
+    transition-duration: .6s;
+  }
+  
+  .menuSection.on .menu a {
+    font-size: 3.2rem;
+    display: block;
+    margin-bottom: 5rem;
+    transition: all .3s ease-in;
+  }
+
+  
+  .menuSection.on .menuToggle {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    margin-right: calc(10% + 11px);
+  }
+  
+  .menuSection.on .menuToggle .one {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+  
+  .menuSection.on .menuToggle .two {
+    opacity: 0;
+  }
+  
+  .menuSection.on .menuToggle .three {
+    transform: rotate(-45deg) translate(10px, -10px);
+  }
+  
+  
+  /* MENU TOGGLE END*/
 }
 
 @media screen and (max-width: 768px) {
-  :root{
+  :root {
     --generalWidth: 500px;
   }
   
@@ -606,6 +648,7 @@ footer {
   .contentPartners h2 {
     scale: 0.9;
   }
+  
   .partnersDescription {
     font-size: 1.7rem;
     text-align: center;
@@ -618,49 +661,62 @@ footer {
   }
 }
 
-@media screen and (max-width: 520px){
-  :root{
+@media screen and (max-width: 520px) {
+  :root {
     --generalWidth: 450px;
   }
+  
   .initialGreetings {
     width: 80%;
   }
+  .menuSection.on .menu a{
+    font-size: 3rem;
+  }
+  
   .greetingImg {
     width: 300px;
   }
+
   .contentPartners h2 {
     scale: 0.8;
   }
-  
+
   .partnersDescription {
     font-size: 1.6rem;
   }
+
   .item {
     max-height: 85px;
     max-width: 85px;
   }
 }
-@media screen and (max-width: 470px){
-  :root{
+
+@media screen and (max-width: 470px) {
+  :root {
     --generalWidth: 400px;
   }
+
   .initialGreetings {
     width: 90%;
     scale: .8;
   }
+
   .contentPartners h2 {
     scale: 0.7;
   }
+
   .partnersDescription {
     font-size: 1.4rem;
   }
-  
+
 }
-@media screen and (max-width: 420px){
-  :root{
+
+@media screen and (max-width: 420px) {
+  :root {
     --generalWidth: 350px;
   }
-  .contentAboutUs p{
+
+  .contentAboutUs p {
     max-width: 90%;
   }
 }
