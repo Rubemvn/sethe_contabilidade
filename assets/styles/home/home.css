@@ -582,6 +582,9 @@ footer {
     height: 100vh;
 
     background-color: #ffffff52;
+    -webkit-backdrop-filter: blur(7px);
+    -moz-backdrop-filter: blur(7px);
+    -o-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
 
     z-index: 10;
