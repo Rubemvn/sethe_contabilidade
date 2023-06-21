@@ -1,3 +1,6 @@
+// MENSAGEM DE ALERT
+alert("Esse site está em processo de desenvolvimento.")
+
 const controls = document.querySelectorAll(".control");
 const galleryWrapper = document.querySelector('.galleryWrapper')
 let scrollAmount = 0
