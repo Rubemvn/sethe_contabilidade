@@ -559,7 +559,7 @@ footer {
     height: 37px;
     margin-right: 10%;
   }
-  
+
   .one,
   .two,
   .three {
@@ -567,23 +567,23 @@ footer {
     height: 3px;
     width: 100%;
     margin: 9px auto;
-    
+
     transition-duration: .35s;
   }
-  
+
   /* Clicado */
-  
+
   .menuSection.on {
     position: absolute;
     top: 0;
     left: 0;
-    
+
     width: 100vw;
     height: 100vh;
-    
+
     background-color: #ffffff52;
     backdrop-filter: blur(7px);
-    
+
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -597,35 +597,34 @@ footer {
     margin-bottom: 150px;
     transition-duration: .6s;
   }
-  
+
   .menuSection.on .menu a {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     display: block;
     margin-bottom: 5rem;
     transition: all .3s ease-in;
   }
 
-  
   .menuSection.on .menuToggle {
     position: absolute;
     top: 15px;
     right: 0;
     margin-right: 10%;
   }
-  
+
   .menuSection.on .menuToggle .one {
     transform: rotate(45deg) translate(7px, 7px);
   }
-  
+
   .menuSection.on .menuToggle .two {
     opacity: 0;
   }
-  
+
   .menuSection.on .menuToggle .three {
     transform: rotate(-45deg) translate(10px, -10px);
   }
-  
-  
+
+
   /* MENU TOGGLE END*/
 }
 
@@ -633,25 +632,25 @@ footer {
   :root {
     --generalWidth: 500px;
   }
-  
+
   .initialGreetings {
     width: 70%;
   }
-  
+
   .item {
     max-height: 100px;
     max-width: 100px;
   }
-  
+
   .contentPartners h2 {
     scale: 0.9;
   }
-  
+
   .partnersDescription {
     font-size: 1.7rem;
     text-align: center;
   }
-  
+
   .contentPartnersFeedback {
     grid-template: auto auto auto auto / auto;
     width: auto;
@@ -663,14 +662,11 @@ footer {
   :root {
     --generalWidth: 450px;
   }
-  
+
   .initialGreetings {
     width: 80%;
   }
-  .menuSection.on .menu a{
-    font-size: 3rem;
-  }
-  
+
   .greetingImg {
     width: 300px;
   }
