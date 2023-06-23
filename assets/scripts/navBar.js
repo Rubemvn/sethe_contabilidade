@@ -2,6 +2,7 @@ let show = true;
 
 const menuSection = document.querySelector(".menuSection");
 const menuToggle = menuSection.querySelector(".menuToggle");
+const navBar = document.querySelector("nav");
 
 menuToggle.addEventListener('click', () => {
 
@@ -11,14 +12,24 @@ menuToggle.addEventListener('click', () => {
     show = !show;
 })
 
-function closeMenuToggle(){
-    
+function closeMenuToggle() {
+
     let overflow = document.body.style.overflow;
-    
-    if(overflow == "hidden"){
-    
+
+    if (overflow == "hidden") {
+
         document.body.style.overflow = "initial";
         menuSection.classList.remove("on");
-    
+
     }
 }
+
+function addClass() {
+    window.addEventListener('scroll', () => {
+        const pageHeigh = window.scrollY
+        if (pageHeigh < 100) navBar.classList.remove('scroll')
+        else navBar.classList.add('scroll')
+    })
+}
+
+addClass()
