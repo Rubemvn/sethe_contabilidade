@@ -5,6 +5,7 @@
   --color03_01: #6dd1acc7;
   --color04: #c5ffe9;
   --color05: #03b093;
+  --color06: #c4ffea;
   --generalWidth: 1500px;
 }
 
@@ -13,7 +14,6 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-
 }
 
 html {
@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   scroll-behavior: smooth;
 }
@@ -42,7 +42,6 @@ body::-webkit-scrollbar-thumb {
   /* border-right: 0; */
 }
 
-
 /* NavBar */
 .navBar {
   background-color: var(--color01);
@@ -54,7 +53,7 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   top: 0;
   z-index: 1000;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 
 nav.scroll {
@@ -68,11 +67,10 @@ nav.scroll {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1440px;
   color: var(--color01);
   margin: 0 10%;
 }
-
 
 .navBarContent a {
   font-size: 1.6rem;
@@ -82,7 +80,7 @@ nav.scroll {
 .linksNavBar {
   text-decoration: none;
   color: var(--color02);
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .linksNavBar:hover {
@@ -94,22 +92,20 @@ nav.scroll {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 48px;
 }
 
-.buttonContact,
-.contact {
+.buttonContact {
   text-decoration: none;
   background-color: var(--color03);
   border-radius: 50px;
   padding: 10px 20px;
-  color: var(--color02);
-  transition: all .2s ease-in-out;
+  color: var(--color01);
+  transition: all 0.2s ease-in-out;
   border: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   cursor: pointer;
-
 }
 
 .buttonContact:hover,
@@ -135,8 +131,7 @@ nav.scroll {
   align-items: center;
 
   z-index: 2000;
-  transition: all .2s ease-in-out;
-
+  transition: all 0.2s ease-in-out;
 }
 
 .arrow {
@@ -171,7 +166,7 @@ nav.scroll {
   -webkit-box-shadow: 0px 25px 33px -15px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0px 25px 33px -15px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 25px 33px -15px rgba(0, 0, 0, 0.4);
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .whatsAppBalloon:hover {
@@ -198,8 +193,11 @@ main {
   align-items: center;
   height: 100vh;
   min-height: 660px;
-  max-width: var(--generalWidth);
+  /* max-width: var(--generalWidth); */
   width: 100%;
+
+  background-image: url("../../images/others/Wallpaper.jpg");
+  background-size: cover;
 }
 
 .initialGreetings {
@@ -208,13 +206,14 @@ main {
   align-items: start;
   flex-direction: column;
   width: 40%;
+  z-index: 1;
 }
 
 .initialGreetings h1 {
-  font-size: 6rem;
+  font-size: 4rem;
   color: var(--color02);
-  line-height: 5.75rem;
-  font-weight: 800;
+  line-height: normal;
+  font-weight: 600;
   margin-bottom: 30px;
 }
 
@@ -222,6 +221,7 @@ main {
   font-size: 1.8rem;
   color: var(--color02);
   margin-bottom: 30px;
+  width: 50%;
 }
 
 .greetingImg {
@@ -233,21 +233,19 @@ main {
   gap: 10px;
 }
 
-.button2 {
-  cursor: pointer;
-  background-color: var(--color01);
-  border: var(--color03) solid 3px;
-  border-radius: 50px;
-  padding: 10px 20px;
-  color: var(--color02);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  transition: all .2s ease-in-out;
-}
-
-.button2:hover {
-  border-color: var(--color03_01);
-  font-weight: 600;
+.gradiente {
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgb(196, 255, 234);
+  background: linear-gradient(
+    90deg,
+    rgba(196, 255, 234, 1) 0%,
+    rgba(196, 255, 234, 1) 20%,
+    rgba(196, 255, 234, 0) 80%,
+    rgba(196, 255, 234, 0) 100%
+  );
 }
 
 /* greetings Section END*/
@@ -256,8 +254,66 @@ main {
 .aboutUs {
   display: flex;
   justify-content: center;
-  background-color: var(--color02);
+  background-color: var(--color01);
   width: 100%;
+  z-index: 30;
+}
+
+.cardsContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.cardAboutUs {
+  position: relative;
+  top: -60%;
+  width: 290px;
+  height: 230px;
+  padding: 33px;
+  display: flex;
+  flex-direction: column-reverse;
+  border-radius: 20px;
+  color: var(--color02);
+  background-color: var(--color01);
+
+  -webkit-box-shadow: 6px 6px 32px 0px #00000038;
+  -moz-box-shadow: 6px 6px 32px 0px #00000038;
+  box-shadow: 6px 6px 32px 0px #00000038;
+}
+
+.cardAboutUs h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.cardAboutUs p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.containerDeConteudo {
+  width: 1000px;
+  height: 561px;
+  border-radius: 20px;
+  padding: 60px;
+  background-color: var(--color01);
+  
+  -webkit-box-shadow: 6px 6px 32px 0px #00000038;
+  -moz-box-shadow: 6px 6px 32px 0px #00000038;
+  box-shadow: 6px 6px 32px 0px #00000038;
+}
+
+.containerDeConteudo h2{
+  font-size: 4.8rem;
+  color: var(--color02);
+  font-weight: 600;
+  text-align: center;
 }
 
 .contentAboutUs {
@@ -265,40 +321,9 @@ main {
   text-align: center;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0;
+  width: 100%;
   max-width: var(--generalWidth);
 }
-
-.contentAboutUs h2 {
-  font-size: 5rem;
-  color: var(--color01);
-  padding-bottom: 5%;
-}
-
-.contentAboutUs p {
-  text-align: justify;
-  font-size: 1.8rem;
-  color: var(--color01);
-  padding: 0 0 5% 0;
-}
-
-.owners {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-}
-
-.owner img {
-  width: 370px;
-}
-
-.owner h3 {
-  font-size: 3rem;
-  color: var(--color03);
-}
-
-
 /* AboutUs END */
 
 /* Partners */
@@ -319,52 +344,6 @@ main {
   max-width: var(--generalWidth);
 }
 
-.contentPartners h2 {
-  color: var(--color02);
-  font-size: 4rem;
-  padding: 10px 80px;
-  border: 2px solid var(--color03);
-  border-radius: 100px;
-  margin-bottom: 50px;
-}
-
-.partnersDescription {
-  color: var(--color02);
-  font-size: 1.8rem;
-  margin-bottom: 50px;
-}
-
-.contentPartnersFeedback {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 100px;
-}
-
-.partnerFeedback {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 40px;
-  border: 1px solid var(--color03);
-  border-radius: 50px;
-  width: 300px;
-  min-height: 250px;
-}
-
-.comment {
-  /* text-align: justify; */
-  color: var(--color03);
-  font-size: 1.9rem;
-}
-
-.commentAuthor {
-  font-weight: 700;
-  color: var(--color02);
-  font-size: 1.6rem;
-}
-
 /* Carousel */
 .carousel {
   position: relative;
@@ -372,7 +351,6 @@ main {
   max-width: 100%;
   margin: 0 auto;
   margin-bottom: 100px;
-
 }
 
 .arrowLeft,
@@ -391,7 +369,7 @@ main {
   cursor: pointer;
   border: none;
   background: linear-gradient(to left, transparent 0%, #ffffff 50%);
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .arrowRight {
@@ -414,13 +392,11 @@ main {
   gap: 20px;
 }
 
-
 .item {
   max-height: 150px;
   max-width: 150px;
   transition: all 600ms ease-in-out;
 }
-
 
 .galleryWrapper::-webkit-scrollbar {
   display: none;
@@ -439,12 +415,13 @@ main {
 
 /* footer */
 footer {
-  background-color: var(--color05);
+  background-color: var(--color02);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 50px 0;
+  height: 300px;
 }
 
 .contentFooter {
@@ -454,22 +431,6 @@ footer {
   max-width: var(--generalWidth);
   width: 100%;
 }
-
-.descriptionFooter p {
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: var(--color01);
-  max-width: 30%;
-  padding-bottom: 30px;
-}
-
-.descriptionFooter a {
-  text-decoration: none;
-  color: var(--color02);
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
 /* footer END*/
 
 /* MEDIA SCREEN */
@@ -514,7 +475,7 @@ footer {
   }
 
   .initialGreetings {
-    scale: .9;
+    scale: 0.9;
   }
 
   .greetingImg {
@@ -532,7 +493,7 @@ footer {
   }
 
   .owner {
-    scale: .85;
+    scale: 0.85;
   }
 
   .contentPartnersFeedback {
@@ -550,12 +511,11 @@ footer {
     flex-direction: column-reverse;
     justify-content: center;
     gap: 10px;
-
   }
 
   .initialGreetings {
     width: 60%;
-    scale: .9;
+    scale: 0.9;
   }
 
   .greetingImg {
@@ -600,7 +560,7 @@ footer {
     width: 100%;
     margin: 9px auto;
 
-    transition-duration: .35s;
+    transition-duration: 0.35s;
   }
 
   /* Clicado */
@@ -623,21 +583,21 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all .3s ease-in;
+    transition: all 0.3s ease-in;
   }
 
   .menuSection.on .menu {
     display: block;
     text-align: center;
     margin-bottom: 150px;
-    transition-duration: .6s;
+    transition-duration: 0.6s;
   }
 
   .menuSection.on .menu a {
     font-size: 2.5rem;
     display: block;
     margin-bottom: 5rem;
-    transition: all .3s ease-in;
+    transition: all 0.3s ease-in;
   }
 
   .menuSection.on .menuToggle {
@@ -658,7 +618,6 @@ footer {
   .menuSection.on .menuToggle .three {
     transform: rotate(-45deg) translate(10px, -10px);
   }
-
 
   /* MENU TOGGLE END*/
 }
@@ -727,7 +686,7 @@ footer {
 
   .initialGreetings {
     width: 90%;
-    scale: .8;
+    scale: 0.8;
   }
 
   .contentPartners h2 {
@@ -737,7 +696,6 @@ footer {
   .partnersDescription {
     font-size: 1.4rem;
   }
-
 }
 
 @media screen and (max-width: 420px) {
@@ -749,3 +707,5 @@ footer {
     max-width: 90%;
   }
 }
+
+/* MEDIA SCREEN END*/

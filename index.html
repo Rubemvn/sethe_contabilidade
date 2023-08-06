@@ -1,227 +1,249 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Sethe Contabilidade" />
+    <meta
+      property="og:description"
+      content="Venha conhecer a sethe contabilidade! Somos uma empresa..."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/Rubemvn/sethe_contabilidade/main/assets/images/others/previewsethe.png"
+    />
+    <meta property="og:url" content="https://sethecontabilidade.com.br/" />
+    <!-- browser tab icon-->
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="./assets/images/icons/sethereduzida.png"
+    />
+    <title>Sethe Contabilidade</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="./assets/styles/home/home.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Sethe Contabilidade">
-  <meta property="og:description" content="Venha conhecer a sethe contabilidade! Somos uma empresa...">
-  <meta property="og:image" content="https://raw.githubusercontent.com/Rubemvn/sethe_contabilidade/main/assets/images/others/previewsethe.png">
-  <meta property="og:url" content="https://sethecontabilidade.com.br/">
-  <!-- browser tab icon-->
-  <link rel="shortcut icon" type="x-icon" href="./assets/images/icons/sethereduzida.png">
-  <title>Sethe Contabilidade</title>
-  <!-- Style -->
-  <link rel="stylesheet" href="./assets/styles/home/home.css">
-  <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-    rel="stylesheet">
-</head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navBar">
+      <div class="navBarContent">
+        <a class="logo" href="#"
+          ><img
+            style="height: 30px"
+            src="./assets/images/icons/sethe.png"
+            alt=""
+        /></a>
 
-<body>
+        <div class="menuSection">
+          <div class="menuToggle">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </div>
 
-  <!-- Navigation Bar -->
-  <nav class="navBar">
-    <div class="navBarContent">
-      <a class="logo" href="#"><img style="height: 30px;" src="./assets/images/icons/sethe.png" alt=""></a>
-
-      <div class="menuSection">
-
-        <div class="menuToggle">
-          <div class="one"></div>
-          <div class="two"></div>
-          <div class="three"></div>
+          <div class="menu">
+            <a class="linksNavBar" onclick="closeMenuToggle()" href="#"
+              >Início</a
+            >
+            <a class="linksNavBar" onclick="closeMenuToggle()" href="#aboutUs"
+              >Sobre nós</a
+            >
+            <a class="linksNavBar" onclick="closeMenuToggle()" href="#"
+              >Contato</a
+            >
+          </div>
         </div>
-
-        <div class="menu">
-          <a class="linksNavBar" onclick="closeMenuToggle()" href="#">Início</a>
-          <a class="linksNavBar" onclick="closeMenuToggle()" href="#aboutUs">Sobre nós</a>
-          <a class="linksNavBar" onclick="closeMenuToggle()" href="#">Contato</a>
-          <a class="contact" onclick="closeMenuToggle()" href="#">Agende uma reunião</a>
-        </div>
+        <button class="buttonContact" onclick="closeMenuToggle()" href="#">
+          Agende uma reunião
+        </button>
       </div>
+    </nav>
+    <!-- Navigation Bar END-->
+
+    <!-- Scroll balloon -->
+    <div class="scrollBallon">
+      <div class="arrow"></div>
     </div>
-  </nav>
-  <!-- Navigation Bar END-->
+    <!-- Scroll balloon  END -->
 
-  <!-- Scroll balloon -->
-  <div class="scrollBallon">
-    <div class="arrow"></div>
-  </div>
-  <!-- WhatsApp ballon -->
-  <div class="whatsAppBalloon">
-    <a href="https://api.whatsapp.com/message/BKKMPTDG2BFWE1?autoload=1&app_absent=0" target="_blank">
-      <img width="60" height="60" src="./assets/images/icons/icons8-whatsapp-60.png" alt="whatsapp" />
-    </a>
-  </div>
-  <!-- WhatsApp ballon -->
-  <!-- Scroll balloon  END-->
+    <!-- WhatsApp ballon -->
+    <div class="whatsAppBalloon">
+      <a
+        href="https://api.whatsapp.com/message/BKKMPTDG2BFWE1?autoload=1&app_absent=0"
+        target="_blank"
+      >
+        <img
+          width="60"
+          height="60"
+          src="./assets/images/icons/icons8-whatsapp-60.png"
+          alt="whatsapp"
+        />
+      </a>
+    </div>
+    <!-- WhatsApp ballon END -->
 
+    <main>
+      <!-- Section with initial greetings -->
+      <section class="greetingsSection">
+        <div class="initialGreetings">
+          <h1>
+            Contabilidade e<br />
+            Acessoria Humanizada
+          </h1>
+          <p>
+            Soluções contábeis de alta qualidade e eficiência para sua emrpesa.
+            Você se concentra no seu negócio sem se preocupar com as rotinas
+            contábeis.
+          </p>
 
-  <main>
-    <!-- Section with initial greetings -->
-    <section class="greetingsSection">
-      <div class="initialGreetings">
-
-        <h1>É simples<br> É sethe!</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </p>
-
-        <div class="greetingsButtons">
-          <button class="buttonContact">LOREM IPSUM</button>
-          <button class="button2">LOREM IPSUM</button>
-        </div>
-      </div>
-
-      <img class="greetingImg" src="./assets/images/others/greetingIMG.png" alt="">
-    </section>
-    <!-- Section with initial greetings END-->
-
-    <!-- Section with 'About us' information -->
-    <section class="aboutUs" id="aboutUs">
-      <div class="contentAboutUs">
-
-        <h2>Sobre nós</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lorem sem, rhoncus non porttitor in, auctor
-          non tellus. Aenean rutrum dictum sapien nec imperdiet. Duis pharetra posuere turpis, vitae lobortis ipsum
-          nibus sit amet.
-          nec. <br><br>
-          Phasellus eros est, sollicitudin ut tristique non, semper vitae magna. Integer non porta lectus. In accumsan
-          tristique leo. Donec aliquam, justo ut porta ultrices, magna libero condimentum urna, non sagittis leo purus
-          at leo. Donec
-          lacinia odio sit amet elit convallis venenatis. Vivamus lectus massa, tristique a pretium sed, semper in
-          tortor. Mauris
-          laoreet ut urna ut sodales. Etiam congue, sapien ut ultricies ultrices, leo metus tristique sem, in vulputate
-          arcu elit sed erat.
-        </p>
-        <div class="owners">
-          <div class="owner">
-            <img src="./assets/images/owners/Amanda(teste).png" alt="Amanda Moura">
-            <h3>Amanda Moura</h3>
-          </div>
-          <div class="owner">
-            <img src="./assets/images/owners/Victor(teste).png" alt="Vitor Alves">
-            <h3>Vitor Alves</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Section with 'About us' information END-->
-
-    <!-- Section with information about the 'partners' -->
-    <section class="partners">
-      <div class="contentPartners">
-        <h2>Parceiros</h2>
-        <p class="partnersDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        <div class="contentPartnersFeedback">
-          <div class="partnerFeedback">
-            <p class="comment">É muito bom saber
-              que posso ficar
-              despreocupado
-              em relação às
-              finanças da minha
-              empresa..</p>
-            <p class="commentAuthor">Joaquim - Mais 1 café</p>
-          </div>
-
-          <div class="partnerFeedback">
-            <p class="comment">É muito bom saber
-              que posso ficar
-              despreocupado
-              em relação às
-              finanças da minha
-              empresa..</p>
-            <p class="commentAuthor">Clemildo - Laranja</p>
-          </div>
-
-          <div class="partnerFeedback">
-            <p class="comment">É muito bom saber
-              que posso ficar
-              despreocupado
-              em relação às
-              finanças da minha
-              empresa..</p>
-            <p class="commentAuthor">Amadeu - RTA</p>
-          </div>
-
-          <div class="partnerFeedback">
-            <p class="comment">É muito bom saber
-              que posso ficar
-              despreocupado
-              em relação às
-              finanças da minha
-              empresa..</p>
-            <p class="commentAuthor">José Maria - Pingo</p>
+          <div class="greetingsButtons">
+            <button class="buttonContact">Agende uma reunião</button>
           </div>
         </div>
 
-        <div class="carousel">
-          <button class="arrowLeft control"><img src="./assets/images/icons/leftArrow.png" alt=""></button>
-          <button class="arrowRight control"><img src="./assets/images/icons/rightArrow.png" alt=""></button>
-          <div class="galleryWrapper">
-            <div class="gallery">
-              <img src="./assets/images/partners/laranjinha.png" alt="laranjinha" class="item">
-              <img src="./assets/images/partners/mais1cafe.png" alt="mais1cafe" class="item">
-              <img src="./assets/images/partners/pingo.png" alt="pingo" class="item">
-              <img src="./assets/images/partners/RTA.png" alt="RTA" class="item">
-              <img src="./assets/images/partners/laranjinha.png" alt="laranjinha" class="item">
-              <img src="./assets/images/partners/mais1cafe.png" alt="mais1cafe" class="item">
-              <img src="./assets/images/partners/pingo.png" alt="pingo" class="item">
-              <img src="./assets/images/partners/RTA.png" alt="RTA" class="item">
-              <img src="./assets/images/partners/laranjinha.png" alt="laranjinha" class="item">
-              <img src="./assets/images/partners/mais1cafe.png" alt="mais1cafe" class="item">
-              <img src="./assets/images/partners/pingo.png" alt="pingo" class="item">
-              <img src="./assets/images/partners/RTA.png" alt="RTA" class="item">
-              <img src="./assets/images/partners/pingo.png" alt="pingo" class="item">
-              <img src="./assets/images/partners/RTA.png" alt="RTA" class="item">
-              <img src="./assets/images/partners/laranjinha.png" alt="laranjinha" class="item">
-              <img src="./assets/images/partners/mais1cafe.png" alt="mais1cafe" class="item">
-              <img src="./assets/images/partners/pingo.png" alt="pingo" class="item">
-              <img src="./assets/images/partners/laranjinha.png" alt="laranjinha" class="item">
-              <img src="./assets/images/partners/mais1cafe.png" alt="mais1cafe" class="item">
-              <img src="./assets/images/partners/RTA.png" alt="RTA" class="item">
-              <img src="./assets/images/partners/pingo.png" alt="pingo" class="item">
-              <img src="./assets/images/partners/RTA.png" alt="RTA" class="item">
-              <img src="./assets/images/partners/laranjinha.png" alt="laranjinha" class="item">
+        <div class="gradiente"></div>
+        <div class="background">
+          <!-- <img src="./assets/images/others/Wallpaper.jpg" alt="" /> -->
+        </div>
+      </section>
+      <!-- Section with initial greetings END-->
+
+      <!-- Section with 'About us' information -->
+      <section class="aboutUs" id="aboutUs">
+        <div class="contentAboutUs">
+
+          <div class="cardsContainer">
+            <div class="cardAboutUs">
+              <div></div>
+              <div>
+                <h4>Atendimento Personalizado</h4>
+                <p>
+                  Nossa equipe está disponível para atender às suas necessidades,
+                  seja por e-mail, telefone ou WhatsApp.
+                </div>
+              </p>
+            </div>
+
+            <div class="cardAboutUs">
+              <div></div>
+              <div>
+                <h4>Atendimento Personalizado</h4>
+                <p>
+                  Nossa equipe está disponível para atender às suas necessidades,
+                  seja por e-mail, telefone ou WhatsApp.
+                </div>
+              </p>
+            </div>
+
+            <div class="cardAboutUs">
+              <div></div>
+              <div>
+                <h4>Atendimento Personalizado</h4>
+                <p>
+                  Nossa equipe está disponível para atender às suas necessidades,
+                  seja por e-mail, telefone ou WhatsApp.
+                </div>
+              </p>
+            </div>
+          </div>
+
+          <!-- nome de classe temporarea -->
+          <div class="containerDeConteudo">
+            <h2>Site em desenvolvimento</h2>
+          </div>
+        </div>
+      </section>
+      <!-- Section with 'About us' information END-->
+
+      <!-- Section with information about the 'partners' -->
+      <section class="partners">
+        <div class="contentPartners">
+          <div class="carousel">
+            <button class="arrowLeft control">
+              <img src="./assets/images/icons/leftArrow.png" alt="" />
+            </button>
+            <button class="arrowRight control">
+              <img src="./assets/images/icons/rightArrow.png" alt="" />
+            </button>
+            <div class="galleryWrapper">
+              <div class="gallery">
+                <img
+                  src="./assets/images/partners/laranjinha.png"
+                  alt="laranjinha"
+                  class="item"
+                />
+                <img
+                  src="./assets/images/partners/mais1cafe.png"
+                  alt="mais1cafe"
+                  class="item"
+                />
+                <img
+                  src="./assets/images/partners/pingo.png"
+                  alt="pingo"
+                  class="item"
+                />
+                <img
+                  src="./assets/images/partners/RTA.png"
+                  alt="RTA"
+                  class="item"
+                />
+                <img
+                  src="./assets/images/partners/laranjinha.png"
+                  alt="laranjinha"
+                  class="item"
+                />
+                <img
+                  src="./assets/images/partners/mais1cafe.png"
+                  alt="mais1cafe"
+                  class="item"
+                />
+                <img
+                  src="./assets/images/partners/pingo.png"
+                  alt="pingo"
+                  class="item"
+                />
+                <img
+                  src="./assets/images/partners/RTA.png"
+                  alt="RTA"
+                  class="item"
+                />
+                <img
+                  src="./assets/images/partners/RTA.png"
+                  alt="RTA"
+                  class="item"
+                />
+                <img
+                  src="./assets/images/partners/RTA.png"
+                  alt="RTA"
+                  class="item"
+                />
+                <img
+                  src="./assets/images/partners/RTA.png"
+                  alt="RTA"
+                  class="item"
+                />
+              </div>
             </div>
           </div>
         </div>
+      </section>
+      <!-- Section with information about the 'partners' END-->
+    </main>
 
-      </div>
-    </section>
-    <!-- Section with information about the 'partners' END-->
-  </main>
+    <footer>
+      <div class="contentFooter"></div>
+    </footer>
 
-  <footer>
-    <div class="contentFooter">
-
-      <div class="descriptionFooter">
-        <p>
-          Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
-          Maecenas lorem sem,
-          vrhoncus non porttitor in, auctor non tellus.
-          <br><br>
-          Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
-          Maecenas lorem sem,
-          vrhoncus non porttitor in, auctor non tellus
-        </p>
-        <a href="https://www.instagram.com/sethecontabilidade/" target="_blank">
-          @sethecontabilidade
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="./assets/scripts/navBar.js"></script>
-  <script src="./assets/scripts/script.js"></script>
-</body>
-
+    <script src="./assets/scripts/navBar.js"></script>
+    <script src="./assets/scripts/script.js"></script>
+  </body>
 </html>
