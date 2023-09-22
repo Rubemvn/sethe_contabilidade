@@ -250,8 +250,8 @@ main {
 
 /* greetings Section END*/
 
-/* AboutUs */
-.aboutUs {
+/* Cards */
+.cards {
   display: flex;
   justify-content: center;
   background-color: var(--color01);
@@ -267,14 +267,17 @@ main {
   padding: 30px 0;
 }
 
-.cardAboutUs {
+.card {
   position: relative;
   top: -60%;
   width: 290px;
   height: 230px;
   padding: 33px;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  align-items: center;
   border-radius: 20px;
   color: var(--color02);
   background-color: var(--color01);
@@ -284,14 +287,18 @@ main {
   box-shadow: 6px 6px 32px 0px #00000038;
 }
 
-.cardAboutUs h4 {
+.cardImg {
+  width: 80px;
+}
+
+.card h4 {
   font-size: 1.5rem;
   font-weight: 600;
   text-align: left;
   margin-bottom: 5px;
 }
 
-.cardAboutUs p {
+.card p {
   font-size: 1.3rem;
   font-weight: 400;
   text-align: left;
@@ -316,7 +323,7 @@ main {
   text-align: center;
 }
 
-.contentAboutUs {
+.contentCards {
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -324,92 +331,50 @@ main {
   width: 100%;
   max-width: var(--generalWidth);
 }
-/* AboutUs END */
 
-/* Partners */
-.partners {
-  background-color: var(--color01);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 100px 0;
-}
 
-.contentPartners {
+/* Services */
+.services {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
+  width: 100%;
   max-width: var(--generalWidth);
+  padding: 30px;
 }
 
-/* Carousel */
-.carousel {
-  position: relative;
-  padding: 15px;
-  max-width: 100%;
-  margin: 0 auto;
-  margin-bottom: 100px;
-}
-
-.arrowLeft,
-.arrowRight {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: auto;
-  bottom: 0;
+.service {
   display: flex;
-  align-items: center;
   justify-content: center;
-  line-height: 150px;
-  background-color: ffffff00;
-  width: 70px;
-  cursor: pointer;
-  border: none;
-  background: linear-gradient(to left, transparent 0%, #ffffff 50%);
-  transition: all 0.4s ease-in-out;
+  align-content: center;
+  text-align: start;
+  height: max-content;
+  gap: 10px;
 }
 
-.arrowRight {
-  left: auto;
-  right: 0;
-  background: linear-gradient(to right, transparent 0%, #ffffff 50%);
+.serviceDescription{
+  height: 100%;
+  display: block;
+  gap: 20px
+  ;
 }
 
-.carousel button img {
-  width: 50px;
+.serviceDescription h3 {
+  font-size: 2rem;
+  color: var(--color02);
 }
 
-.galleryWrapper {
-  overflow-x: auto;
+.serviceDescription p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color02);
 }
 
-.gallery {
-  display: flex;
-  flex-flow: row nowrap;
-  gap: 20px;
-}
+/* Services END */
 
-.item {
-  max-height: 150px;
-  max-width: 150px;
-  transition: all 600ms ease-in-out;
-}
-
-.galleryWrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.galleryWrapper {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* Carousel END*/
-
-/* Partners END */
+/* Cards END */
 
 /* main END*/
 
@@ -703,7 +668,7 @@ footer {
     --generalWidth: 350px;
   }
 
-  .contentAboutUs p {
+  .contentCards p {
     max-width: 90%;
   }
 }

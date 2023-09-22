@@ -1,0 +1,85 @@
+
+/* Partners */
+.partners {
+  background-color: var(--color01);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 100px 0;
+}
+
+.contentPartners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: var(--generalWidth);
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  padding: 15px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.arrowLeft,
+.arrowRight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 150px;
+  background-color: ffffff00;
+  width: 70px;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to left, transparent 0%, #ffffff 50%);
+  transition: all 0.4s ease-in-out;
+}
+
+.arrowRight {
+  left: auto;
+  right: 0;
+  background: linear-gradient(to right, transparent 0%, #ffffff 50%);
+}
+
+.carousel button img {
+  width: 50px;
+}
+
+.galleryWrapper {
+  overflow-x: auto;
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+}
+
+.item {
+  max-height: 150px;
+  max-width: 150px;
+  transition: all 600ms ease-in-out;
+}
+
+.galleryWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.galleryWrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Carousel END*/
+
+/* Partners END */
