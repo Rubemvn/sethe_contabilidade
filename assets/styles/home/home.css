@@ -6,7 +6,7 @@
   --color04: #c5ffe9;
   --color05: #03b093;
   --color06: #c4ffea;
-  --generalWidth: 1500px;
+  --generalWidth: 1440px;
 }
 
 * {
@@ -69,7 +69,7 @@ nav.scroll {
   width: 100%;
   max-width: 1440px;
   color: var(--color01);
-  margin: 0 10%;
+  margin: 0 5%;
 }
 
 .navBarContent a {
@@ -189,15 +189,20 @@ main {
 /* greetings Section */
 .greetingsSection {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   min-height: 660px;
-  /* max-width: var(--generalWidth); */
   width: 100%;
 
   background-image: url("../../images/others/Wallpaper.jpg");
   background-size: cover;
+}
+
+.contentGreetings {
+  width: var(--generalWidth);
+  z-index: 1;
+  margin: 0 5%;
 }
 
 .initialGreetings {
@@ -205,8 +210,7 @@ main {
   justify-content: center;
   align-items: start;
   flex-direction: column;
-  width: 40%;
-  z-index: 1;
+  width: 70%;
 }
 
 .initialGreetings h1 {
@@ -221,7 +225,7 @@ main {
   font-size: 1.8rem;
   color: var(--color02);
   margin-bottom: 30px;
-  width: 50%;
+  width: 70%;
 }
 
 .greetingImg {
@@ -245,12 +249,12 @@ main {
     rgba(196, 255, 234, 1) 20%,
     rgba(196, 255, 234, 0) 80%,
     rgba(196, 255, 234, 0) 100%
-  );
-}
-
-/* greetings Section END*/
-
-/* Cards */
+    );
+  }
+  
+  /* greetings Section END*/
+  
+  /* Cards */
 .cards {
   display: flex;
   justify-content: center;
@@ -281,7 +285,7 @@ main {
   border-radius: 20px;
   color: var(--color02);
   background-color: var(--color01);
-
+  
   -webkit-box-shadow: 6px 6px 32px 0px #00000038;
   -moz-box-shadow: 6px 6px 32px 0px #00000038;
   box-shadow: 6px 6px 32px 0px #00000038;
@@ -331,6 +335,7 @@ main {
   width: 100%;
   max-width: var(--generalWidth);
 }
+/* Cards END */
 
 
 /* Services */
@@ -343,26 +348,37 @@ main {
   width: 100%;
   max-width: var(--generalWidth);
   padding: 30px;
+  gap: 100px;
+  margin-bottom: 200px;
+}
+
+.serviceImage img {
+  width: 500px
+}
+
+.services h2 {
+  font-size: 4rem;
+  color: var(--color02);
+  margin-bottom: 50px;
 }
 
 .service {
   display: flex;
   justify-content: center;
   align-content: center;
-  text-align: start;
-  height: max-content;
-  gap: 10px;
+  /* height: min-content; */
+  gap: 35px;
 }
 
-.serviceDescription{
-  height: 100%;
-  display: block;
-  gap: 20px
-  ;
+.serviceDescription {
+  text-align: start;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .serviceDescription h3 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: var(--color02);
 }
 
@@ -372,9 +388,48 @@ main {
   color: var(--color02);
 }
 
+.serviceDescription button {
+  background-color: var(--color03);
+  border: none;
+  width: max-content;
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: var(--color01);
+  border-radius: 12px;
+  
+}
+
+.serviceRight {
+  text-align: end;
+  align-items: flex-end;
+}
+
 /* Services END */
 
-/* Cards END */
+/*  */
+
+.seiLa {
+  background-image: url("../../images/others/closeup-economist-using-calculator-while-going-through-bills-taxes-office\ 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 150px 0;
+  gap: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards2 {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+
+}
+/* END */
+
 
 /* main END*/
 
@@ -400,73 +455,36 @@ footer {
 
 /* MEDIA SCREEN */
 
-/* 1800 */
-@media screen and (max-width: 1800px) {
-  :root {
-    --generalWidth: 1300px;
-  }
-
-  .contentPartnersFeedback {
-    justify-content: space-between;
-  }
-
-  .partnerFeedback {
-    scale: 0.95;
-  }
-}
-
-/* 1440> */
+/* 1440px */
 @media screen and (max-width: 1440px) {
   :root {
-    --generalWidth: 1000px;
+    --generalWidth: 1440px;
   }
-
-  .contentPartnersFeedback {
-    width: 60%;
-    display: grid;
-    grid-template: auto auto / auto auto;
-    gap: 50px;
-  }
-
-  .partnerFeedback {
-    scale: 1;
-  }
-}
-
-/* 1220> */
-@media screen and (max-width: 1220px) {
-  :root {
-    --generalWidth: 850px;
-  }
-
+  
   .initialGreetings {
-    scale: 0.9;
+    padding-left: 50px;
   }
-
-  .greetingImg {
-    width: 500px;
-  }
-
-  .contentPartnersFeedback {
-    width: 70%;
+  
+  .service{
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    max-width: 800px;
   }
 }
 
+/* 1024px */
 @media screen and (max-width: 1024px) {
-  .owners {
-    justify-content: space-between;
-  }
+  :root {
 
-  .owner {
-    scale: 0.85;
-  }
-
-  .contentPartnersFeedback {
-    width: 80%;
   }
 }
 
-@media screen and (max-width: 900px) {
+
+
+/* MENU TOGGLE */
+/* 768px */
+@media screen and (max-width: 768px) {
   :root {
     --generalWidth: 600px;
   }
@@ -477,33 +495,20 @@ footer {
     justify-content: center;
     gap: 10px;
   }
-
+  
   .initialGreetings {
-    width: 60%;
+    padding-left: 0;
+    width: 80%;
     scale: 0.9;
   }
-
+  .initialGreetings p{
+    width: 100%;
+  }
+  
   .greetingImg {
     width: 400px;
   }
 
-  .owners {
-    flex-direction: column;
-  }
-
-  .contentPartnersFeedback {
-    width: 100%;
-    gap: 0;
-  }
-
-  .partnerFeedback {
-    scale: 0.9;
-  }
-
-  .item {
-    max-height: 120px;
-    max-width: 120px;
-  }
 
   /* MENU TOGGLE */
 
@@ -514,7 +519,7 @@ footer {
   .menuToggle {
     width: 37px;
     height: 37px;
-    margin-right: 10%;
+    margin-right: 5%;
   }
 
   .one,
@@ -569,7 +574,7 @@ footer {
     position: absolute;
     top: 15px;
     right: 0;
-    margin-right: 10%;
+    margin-right: 5%;
   }
 
   .menuSection.on .menuToggle .one {
@@ -584,93 +589,5 @@ footer {
     transform: rotate(-45deg) translate(10px, -10px);
   }
 
-  /* MENU TOGGLE END*/
 }
-
-@media screen and (max-width: 768px) {
-  :root {
-    --generalWidth: 500px;
-  }
-
-  .initialGreetings {
-    width: 70%;
-  }
-
-  .item {
-    max-height: 100px;
-    max-width: 100px;
-  }
-
-  .contentPartners h2 {
-    scale: 0.9;
-  }
-
-  .partnersDescription {
-    font-size: 1.7rem;
-    text-align: center;
-  }
-
-  .contentPartnersFeedback {
-    grid-template: auto auto auto auto / auto;
-    width: auto;
-    row-gap: 20px;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  :root {
-    --generalWidth: 450px;
-  }
-
-  .initialGreetings {
-    width: 80%;
-  }
-
-  .greetingImg {
-    width: 300px;
-  }
-
-  .contentPartners h2 {
-    scale: 0.8;
-  }
-
-  .partnersDescription {
-    font-size: 1.6rem;
-  }
-
-  .item {
-    max-height: 85px;
-    max-width: 85px;
-  }
-}
-
-@media screen and (max-width: 470px) {
-  :root {
-    --generalWidth: 400px;
-  }
-
-  .initialGreetings {
-    width: 90%;
-    scale: 0.8;
-  }
-
-  .contentPartners h2 {
-    scale: 0.7;
-  }
-
-  .partnersDescription {
-    font-size: 1.4rem;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  :root {
-    --generalWidth: 350px;
-  }
-
-  .contentCards p {
-    max-width: 90%;
-  }
-}
-
-/* MEDIA SCREEN END*/
+/* MENU TOGGLE END*/
