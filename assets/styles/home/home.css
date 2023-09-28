@@ -402,10 +402,13 @@ main {
 }
 
 .serviceRight {
-  text-align: end;
-  align-items: flex-end;
+  flex-direction: row-reverse;
 }
 
+.serviceRight .serviceDescription{
+  text-align: end;
+  align-items: end;
+}
 /* Services END */
 
 /*  */
