@@ -1,7 +1,8 @@
 import React from "react";
+import { Container } from "./styles";
 
 const ContentHome = () => {
-	return <div>ContentHome</div>;
+	return <Container>{/* <HeroSection /> */}</Container>;
 };
 
 export default ContentHome;

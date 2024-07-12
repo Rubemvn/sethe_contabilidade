@@ -16,15 +16,15 @@ export default createGlobalStyle`
   box-sizing: border-box;
    &::-webkit-scrollbar {
 		width: 7px;
-		/* background: ${({ theme }) => theme.colors.theme01}; */
 		border-radius: 10px;
+    background: ${({ theme }) => theme.colors.theme01};
 	}
-
+  
 	&::-webkit-scrollbar-thumb {
-		/* background: ${({ theme }) => theme.colors.primary}; */
+    /* background: ${({ theme }) => theme.colors.primary}; */
 		border-radius: 10px;
 	}
-
+  
 }
 
 html{
@@ -42,7 +42,7 @@ body{
   width: 100%;
   height: 100vh;
   /* font-family: 'bricolage Grotesque'; */
-  /* background-color: ${(props) => props.theme.colors.theme01}; */
+  background-color: ${(props) => props.theme.colors.theme01};
   
   -webkit-user-select: none;   
   -moz-user-select: none;

@@ -1,3 +1,4 @@
+import ThemeContextProvider from "@/context/ThemeContext";
 import StyledComponentsRegistry from "./registry";
 
 export const metadata = {
@@ -9,7 +10,9 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang='pt-br'>
 			<body>
-				<StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+				<StyledComponentsRegistry>
+					<ThemeContextProvider>{children}</ThemeContextProvider>
+				</StyledComponentsRegistry>
 			</body>
 		</html>
 	);
