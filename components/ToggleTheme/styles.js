@@ -8,6 +8,8 @@ export const Container = styled.div`
 	align-items: center;
 	height: 4rem;
 
+	z-index: 12;
+
 	cursor: pointer;
 
 	@media ${({ theme }) => theme.device.laptopL} {

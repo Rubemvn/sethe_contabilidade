@@ -42,10 +42,26 @@ export const MenuOptions = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 2rem;
+
+	.listLinks {
+		@media ${({ theme }) => theme.device.tablet} {
+			display: ${({ $menuToggle }) => ($menuToggle ? "flex" : "none")};
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			width: 100%;
+			backdrop-filter: blur(3px) brightness(90%);
+			z-index: 10;
+			justify-content: flex-end;
+			overflow: hidden;
+		}
+	}
 `;
 
 export const MenuToggle = styled.div`
 	display: none;
+	z-index: 11;
 
 	@media ${({ theme }) => theme.device.tablet} {
 		height: 2.4rem;
@@ -60,7 +76,7 @@ export const MenuToggle = styled.div`
 		.line3 {
 			border-radius: 1rem;
 			height: 0.3rem;
-			background-color: ${({ theme }) => theme.colors.theme03};
+			background-color: ${({ theme }) => theme.colors.tertiary};
 		}
 
 		.line1 {
@@ -91,7 +107,18 @@ export const ListOfLinks = styled.ul`
 		gap: 4rem;
 	}
 	@media ${({ theme }) => theme.device.tablet} {
-		display: none;
+		flex-direction: column;
+		position: absolute;
+		overflow: hidden;
+		padding: 3rem;
+		justify-content: center;
+		height: 100%;
+		opacity: 0;
+		background-color: ${({ theme }) => theme.colors.primary};
+
+		-webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+		-moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
 	}
 `;
 

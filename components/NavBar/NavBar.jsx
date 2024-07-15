@@ -13,11 +13,13 @@ import {
 	MenuOptions,
 	MenuToggle,
 } from "./styles";
+
 import { useThemeContext } from "@/hooks/useThemeContext";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 const NavBar = () => {
+	const listOfLinksRef = useRef(null);
 	const [menuToggle, setMenuToggle] = useState(false);
 
 	const { theme } = useThemeContext();
@@ -26,19 +28,24 @@ const NavBar = () => {
 
 	const handleClick = () => {
 		setMenuToggle(!menuToggle);
-		console.log(menuToggle);
 	};
 
 	useEffect(() => {
 		const tl = gsap.timeline({ defaults: { duration: 0.3 } });
+		const listOfLinks = listOfLinksRef.current;
+
 		if (menuToggle) {
-			tl.to(".line1", { rotate: -45, width: 35, y: 5 })
-				.to(".line2", { rotate: 45, y: -5 }, "-=0.3")
+			tl.to(".line1", { rotate: -45, width: 35, y: 10.5 })
+				.to(".line2", { rotate: 45 }, "-=0.3")
 				.to(".line3", { x: 30, opacity: 0 }, "-=0.3");
+
+			gsap.to(listOfLinks, { opacity: 1, x: 0 });
 		} else if (!menuToggle) {
 			tl.to(".line1", { rotate: 0, width: 20, y: 0 })
 				.to(".line2", { rotate: 0, y: 0 }, "-=0.3")
 				.to(".line3", { x: 0, opacity: 1 }, "-=0.3");
+
+			gsap.to(listOfLinks, { opacity: 0, x: 500 });
 		}
 	}, [menuToggle]);
 
@@ -52,26 +59,30 @@ const NavBar = () => {
 					/>
 				</LinkLogoImg>
 
-				<MenuOptions>
-					<MenuToggle onClick={() => handleClick()}>
+				<MenuOptions $menuToggle={menuToggle}>
+					<MenuToggle onClick={handleClick}>
 						<div className='line1'></div>
 						<div className='line2'></div>
 						<div className='line3'></div>
 					</MenuToggle>
-					<ListOfLinks>
-						<li>
-							<LinkTo href={"/"}>Início</LinkTo>
-						</li>
-						<li>
-							<LinkTo href={"/"}>Sobre Nós</LinkTo>
-						</li>
-						<li>
-							<LinkTo href={"/"}>Clientes</LinkTo>
-						</li>
-						<li>
-							<ButtonContact>Contate-nos</ButtonContact>
-						</li>
-					</ListOfLinks>
+
+					<div className='listLinks'>
+						<ListOfLinks ref={listOfLinksRef}>
+							<li>
+								<LinkTo href={"/"}>Início</LinkTo>
+							</li>
+							<li>
+								<LinkTo href={"/"}>Sobre Nós</LinkTo>
+							</li>
+							<li>
+								<LinkTo href={"/"}>Clientes</LinkTo>
+							</li>
+							<li>
+								<ButtonContact>Contate-nos</ButtonContact>
+							</li>
+						</ListOfLinks>
+					</div>
+
 					<ToggleTheme />
 				</MenuOptions>
 			</Content>
