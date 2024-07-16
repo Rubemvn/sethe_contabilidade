@@ -21,6 +21,7 @@ import gsap from "gsap";
 const NavBar = () => {
 	const listOfLinksRef = useRef(null);
 	const logoRef = useRef(null);
+	const menuTGLRef = useRef(null);
 
 	const [menuToggle, setMenuToggle] = useState(false);
 
@@ -56,13 +57,11 @@ const NavBar = () => {
 
 		const logorf = logoRef.current;
 		const listOfLinks = listOfLinksRef.current;
+		const menuTGL = menuTGLRef.current;
 
-		tl.fromTo(logorf, { x: 400 }, { x: 0, opacity: 1 }).fromTo(
-			listOfLinks,
-			{ x: 400 },
-			{ x: 0, opacity: 1 },
-			"-=.9",
-		);
+		tl.fromTo(logorf, { x: 400 }, { x: 0, opacity: 1 })
+			.fromTo(listOfLinks, { x: 400 }, { x: 0, opacity: 1 }, "-=.9")
+			.fromTo(menuTGL, { y: 100, opacity: 0 }, { y: 0, opacity: 1 }, "-=1");
 	}, []);
 
 	return (
@@ -78,7 +77,9 @@ const NavBar = () => {
 				</LinkLogoImg>
 
 				<MenuOptions $menuToggle={menuToggle}>
-					<MenuToggle onClick={handleClick}>
+					<MenuToggle
+						onClick={handleClick}
+						ref={menuTGLRef}>
 						<div className='line1'></div>
 						<div className='line2'></div>
 						<div className='line3'></div>

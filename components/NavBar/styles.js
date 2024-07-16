@@ -29,7 +29,7 @@ export const Content = styled.div`
 `;
 
 export const LinkLogoImg = styled(Link)`
-opacity: 0
+	opacity: 0;
 `;
 
 export const LogoImg = styled(Image)`
