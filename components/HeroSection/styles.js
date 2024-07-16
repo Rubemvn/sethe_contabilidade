@@ -24,6 +24,10 @@ export const Content = styled.div`
 
 export const WelcomeImage = styled(Image)`
 	opacity: 0;
+
+	@media ${({ theme }) => theme.device.laptopL} {
+		width: 45rem;
+	}
 `;
 
 export const WelcomeContainer = styled.div`
@@ -43,6 +47,13 @@ export const Title = styled.h1`
 	font-size: 8rem;
 	color: ${({ theme }) => theme.colors.tertiary};
 	line-height: 8rem;
+
+	@media ${({ theme }) => theme.device.laptopL} {
+		font-size: 6.5rem;
+	}
+	@media ${({ theme }) => theme.device.laptop} {
+		font-size: 5.5rem;
+	}
 `;
 
 export const TextContainer = styled.p`
@@ -52,6 +63,13 @@ export const TextContainer = styled.p`
 	font-weight: 600;
 	color: ${({ theme }) => theme.colors.tertiary};
 	opacity: 0;
+
+	@media ${({ theme }) => theme.device.laptopL} {
+		font-size: 1.8rem;
+	}
+	@media ${({ theme }) => theme.device.laptop} {
+		font-size: 1.6rem;
+	}
 `;
 
 export const ButtonsContainer = styled.div`
@@ -73,12 +91,26 @@ export const SocialMediaButton = styled(Link)`
 	font-weight: 900;
 	border: 3px solid ${({ theme }) => theme.colors.tertiary};
 	border-radius: 3rem;
+
+	@media ${({ theme }) => theme.device.laptopL} {
+		font-size: 2rem;
+		padding: 0.5rem;
+		border: 2px solid ${({ theme }) => theme.colors.tertiary};
+	}
+	@media ${({ theme }) => theme.device.laptop} {
+		font-size: 1.8rem;
+		padding: 0.4rem;
+	}
 `;
 
 export const SymbolsID = styled.div`
 	margin-top: 3rem;
 	display: flex;
 	gap: 3rem;
+
+	@media ${({ theme }) => theme.device.laptop} {
+		scale: 0.9;
+	}
 `;
 
 export const Symbol = styled(Image)`
