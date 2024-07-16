@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { BGToggle, ButtonToggle, Container } from "./styles";
 import gsap from "gsap";
 import { useThemeContext } from "@/hooks/useThemeContext";
@@ -9,6 +9,17 @@ const ToggleTheme = () => {
 	const { theme, setTheme } = useThemeContext();
 
 	const buttonRef = useRef(null);
+	const ctRef = useRef(null);
+
+	useEffect(() => {
+		const ct = ctRef.current;
+
+		gsap.fromTo(
+			ct,
+			{ y: -100, opacity: 0 },
+			{ duration: 1, delay: 0.3, y: 0, opacity: 1 },
+		);
+	}, []);
 
 	const handleClick = () => {
 		const button = buttonRef.current;
@@ -23,6 +34,7 @@ const ToggleTheme = () => {
 
 	return (
 		<Container
+			ref={ctRef}
 			onClick={() => {
 				handleClick();
 			}}>

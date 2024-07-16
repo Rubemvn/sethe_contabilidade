@@ -20,6 +20,8 @@ import gsap from "gsap";
 
 const NavBar = () => {
 	const listOfLinksRef = useRef(null);
+	const logoRef = useRef(null);
+
 	const [menuToggle, setMenuToggle] = useState(false);
 
 	const { theme } = useThemeContext();
@@ -49,10 +51,26 @@ const NavBar = () => {
 		}
 	}, [menuToggle]);
 
+	useEffect(() => {
+		const tl = gsap.timeline({ defaults: { duration: 1, opacity: 0 } });
+
+		const logorf = logoRef.current;
+		const listOfLinks = listOfLinksRef.current;
+
+		tl.fromTo(logorf, { x: 400 }, { x: 0, opacity: 1 }).fromTo(
+			listOfLinks,
+			{ x: 400 },
+			{ x: 0, opacity: 1 },
+			"-=.9",
+		);
+	}, []);
+
 	return (
 		<Container>
 			<Content>
-				<LinkLogoImg href={"/"}>
+				<LinkLogoImg
+					href={"/"}
+					ref={logoRef}>
 					<LogoImg
 						src={logo}
 						alt='Logo da sethe contabilidade'

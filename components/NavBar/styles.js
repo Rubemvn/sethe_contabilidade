@@ -28,7 +28,9 @@ export const Content = styled.div`
 	justify-content: space-between;
 `;
 
-export const LinkLogoImg = styled(Link)``;
+export const LinkLogoImg = styled(Link)`
+opacity: 0
+`;
 
 export const LogoImg = styled(Image)`
 	height: 5rem;
@@ -44,6 +46,7 @@ export const MenuOptions = styled.div`
 	gap: 2rem;
 
 	.listLinks {
+		display: ${({ $menuToggle }) => (!$menuToggle ? "flex" : "none")};
 		@media ${({ theme }) => theme.device.tablet} {
 			display: ${({ $menuToggle }) => ($menuToggle ? "flex" : "none")};
 			position: absolute;
@@ -95,6 +98,7 @@ export const ListOfLinks = styled.ul`
 	display: flex;
 	align-items: center;
 	gap: 6rem;
+	opacity: 0;
 
 	li {
 		list-style: none;
