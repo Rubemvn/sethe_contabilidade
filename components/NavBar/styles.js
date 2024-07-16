@@ -12,6 +12,7 @@ export const Container = styled.nav`
 	background-color: ${({ theme }) => theme.colors.theme01};
 	justify-content: center;
 	align-items: center;
+	z-index: 3000;
 
 	@media ${({ theme }) => theme.device.laptopL} {
 		height: 6rem;
@@ -65,6 +66,7 @@ export const MenuOptions = styled.div`
 export const MenuToggle = styled.div`
 	display: none;
 	z-index: 11;
+	opacity: 0;
 
 	@media ${({ theme }) => theme.device.tablet} {
 		height: 2.4rem;

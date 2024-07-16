@@ -15,13 +15,13 @@ export default createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
    &::-webkit-scrollbar {
-		width: 7px;
-		border-radius: 10px;
+		width: 11px;
     background: ${({ theme }) => theme.colors.theme01};
 	}
   
 	&::-webkit-scrollbar-thumb {
-    /* background: ${({ theme }) => theme.colors.primary}; */
+    background: ${({ theme }) => theme.colors.secondary};
+    border: 2px solid ${({ theme }) => theme.colors.primary};
 		border-radius: 10px;
 	}
   
@@ -31,6 +31,7 @@ html{
   font-size: 62.5%;
   size: 62.5%;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 html, body, :root{
@@ -53,10 +54,8 @@ body{
   
   transition: all .3s ease-out;
   
-  @media (max-width: 1024px){
-    overflow: ${({ isMenuOpen }) => (isMenuOpen ? "hidden" : "auto")};
-	}
-	}
+  overflow-y: auto;
+}
 
  
 

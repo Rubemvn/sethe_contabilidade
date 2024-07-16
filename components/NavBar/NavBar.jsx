@@ -41,14 +41,10 @@ const NavBar = () => {
 			tl.to(".line1", { rotate: -45, width: 35, y: 10.5 })
 				.to(".line2", { rotate: 45 }, "-=0.3")
 				.to(".line3", { x: 30, opacity: 0 }, "-=0.3");
-
-			gsap.to(listOfLinks, { opacity: 1, x: 0 });
 		} else if (!menuToggle) {
 			tl.to(".line1", { rotate: 0, width: 20, y: 0 })
 				.to(".line2", { rotate: 0, y: 0 }, "-=0.3")
 				.to(".line3", { x: 0, opacity: 1 }, "-=0.3");
-
-			gsap.to(listOfLinks, { opacity: 0, x: 500 });
 		}
 	}, [menuToggle]);
 
