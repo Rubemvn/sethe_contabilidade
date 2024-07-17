@@ -13,12 +13,12 @@ import {
 	WelcomeImage,
 } from "./styles";
 
-import maior_que from "@/public/images/maior_que.svg";
-import menor_que from "@/public/images/menor_que.svg";
-import menorLight from "@/public/images/menor_que_light.svg";
+import maiorQue from "@/public/images/maiorQue.svg";
+import menorQueLight from "@/public/images/menorQueLight.svg";
+import menorQueDark from "@/public/images/menorQueDark.svg";
 import mult from "@/public/images/mult.svg";
-import soma from "@/public/images/soma.svg";
-import somaLight from "@/public/images/soma_light.svg";
+import somaLight from "@/public/images/somaLight.svg";
+import somaDark from "@/public/images/somaDark.svg";
 import initial from "@/public/images/initial.svg";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
@@ -144,12 +144,12 @@ const HeroSection = () => {
 					<SymbolsID>
 						<Symbol
 							ref={maiorQueRef}
-							src={maior_que}
+							src={maiorQue}
 							alt='Símbolo de Maior que'
 						/>
 						<Symbol
 							ref={somaRef}
-							src={theme.title === "dark" ? somaLight : soma}
+							src={theme.title === "dark" ? somaDark : somaLight}
 							alt='Símbolo de Adição'
 						/>
 						<Symbol
@@ -159,7 +159,7 @@ const HeroSection = () => {
 						/>
 						<Symbol
 							ref={menorQueRef}
-							src={theme.title === "dark" ? menorLight : menor_que}
+							src={theme.title === "dark" ? menorQueDark : menorQueLight}
 							alt='Símbolo de Menor que'
 						/>
 					</SymbolsID>

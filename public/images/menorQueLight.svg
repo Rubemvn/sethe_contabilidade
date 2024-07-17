@@ -4,12 +4,12 @@
 	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
 <style type="text/css">
 	.st0{display:none;fill:#6DD1AE;}
-	.st1{display:none;fill:#063447;}
-	.st2{fill:#6DD1AE;}
+	.st1{fill:#063447;}
+	.st2{display:none;fill:#063447;}
 </style>
 <path class="st0" d="M67.4,29.6l-6.8,9.3L35,74.8c7.5,4.5,13.6,10.6,17.9,17.7l46.9-65.8L89.5,7.4H0.2V32h63.5L67.4,29.6z"/>
 <path class="st1" d="M32.5,70.5l6.9-9.3L65.1,25c-7.5-4.6-13.6-10.6-18-17.8L0,73.4l10.3,19.4H100V68.1H36.2L32.5,70.5z"/>
-<path class="st1" d="M62.9,3.9H37.1v33.9H2.8v24.4h34.3v33.9h25.8V62.2h34.3V37.8H62.9V3.9z"/>
-<path class="st2" d="M91.7,24.7L75,7.2L50,32.8L25,7.2L8.3,24.7L33.1,50L8.3,75.3L25,92.8l25-25.5l25,25.5l16.7-17.5L66.9,50
+<path class="st2" d="M62.9,3.9H37.1v33.9H2.8v24.4h34.3v33.9h25.8V62.2h34.3V37.8H62.9V3.9z"/>
+<path class="st0" d="M91.7,24.7L75,7.2L50,32.8L25,7.2L8.3,24.7L33.1,50L8.3,75.3L25,92.8l25-25.5l25,25.5l16.7-17.5L66.9,50
 	L91.7,24.7z"/>
 </svg>

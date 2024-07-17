@@ -21,7 +21,7 @@ export default createGlobalStyle`
   
 	&::-webkit-scrollbar-thumb {
     background: ${({ theme }) => theme.colors.secondary};
-    border: 2px solid ${({ theme }) => theme.colors.primary};
+    border: 2px solid ${({ theme }) => theme.colors.theme01};
 		border-radius: 10px;
 	}
   

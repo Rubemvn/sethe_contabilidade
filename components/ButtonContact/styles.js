@@ -39,4 +39,9 @@ export const Container = styled.button`
 		height: 3rem;
 		padding: 0 2.5rem;
 	}
+	@media ${({ theme }) => theme.device.mobileS} {
+		font-size: 1.4rem;
+		height: 2.6rem;
+		padding: 0 2rem;
+	}
 `;
