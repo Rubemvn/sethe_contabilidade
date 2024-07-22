@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 
 const TitleSectionContent = ({ children }) => {
 	gsap.registerPlugin(ScrollTrigger);
+	console.log("Olá mundo");
 
 	const ctRef = useRef(null);
 
@@ -18,9 +19,10 @@ const TitleSectionContent = ({ children }) => {
 			{
 				scrollTrigger: {
 					trigger: ct,
-					start: "top 450px", // Ajuste conforme necessário
-					end: "top 650px", // Ajuste conforme necessário
+					start: "bottom 650px", // Ajuste conforme necessário
+					end: "top 700px", // Ajuste conforme necessário
 					scrub: 2,
+					pin: ct,
 				},
 				x: 0,
 				y: 0,

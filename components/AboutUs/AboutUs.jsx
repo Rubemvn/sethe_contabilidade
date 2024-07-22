@@ -20,25 +20,29 @@ import somaDark from "@/public/images/somaDark.svg";
 const AboutUs = () => {
 	const { theme } = useThemeContext();
 
-	const titleScCtRef = useRef(null);
+	const Infos01Ref = useRef(null);
 	const img01Ref = useRef(null);
+	const Infos02Ref = useRef(null);
+	const img02Ref = useRef(null);
 
 	gsap.registerPlugin(ScrollTrigger);
 
 	useEffect(() => {
 		const tl = gsap.timeline({ defaults: { opacity: 0 } });
-		const ttScCt = titleScCtRef.current;
+		const infos01 = Infos01Ref.current;
 		const img01 = img01Ref.current;
+		const infos02 = Infos02Ref.current;
+		const img02 = img02Ref.current;
 
 		gsap.fromTo(
-			ttScCt,
+			infos01,
 			{ x: 500, opacity: 0 },
 			{
 				scrollTrigger: {
-					trigger: ttScCt,
-					start: "top 200px", // Ajuste conforme necessário
-					end: "center center", // Ajuste conforme necessário
-					markers: true,
+					trigger: infos01,
+					start: "bottom 650px", // Ajuste conforme necessário
+					end: "top 700px", // Ajuste conforme necessário
+					// markers: true,
 					scrub: 3,
 				},
 				x: 0,
@@ -52,8 +56,56 @@ const AboutUs = () => {
 			{
 				scrollTrigger: {
 					trigger: img01,
-					start: "top 200px", // Ajuste conforme necessário
-					end: "-200px", // Ajuste conforme necessário
+					start: "top 650px", // Ajuste conforme necessário
+					end: "bottom 700px", // Ajuste conforme necessário
+					// markers: true,
+					scrub: 3,
+				},
+				x: 0,
+				opacity: 1,
+				duration: 1,
+			},
+		);
+		gsap.fromTo(
+			infos02,
+			{ x: -500, opacity: 0 },
+			{
+				scrollTrigger: {
+					trigger: infos02,
+					start: "top 650px", // Ajuste conforme necessário
+					end: "bottom 700px", // Ajuste conforme necessário
+					// markers: true,
+					scrub: 3,
+				},
+				x: 0,
+				opacity: 1,
+				duration: 1,
+			},
+		);
+		gsap.fromTo(
+			".titleBrand",
+			{ y: 300, opacity: 0 },
+			{
+				scrollTrigger: {
+					trigger: ".titleBrand",
+					start: "top 650px", // Ajuste conforme necessário
+					end: "bottom 700px", // Ajuste conforme necessário
+					markers: true,
+					scrub: 3,
+				},
+				y: 0,
+				opacity: 1,
+				duration: 1,
+			},
+		);
+		gsap.fromTo(
+			img02,
+			{ x: 500, opacity: 0 },
+			{
+				scrollTrigger: {
+					trigger: img02,
+					start: "top 650px", // Ajuste conforme necessário
+					end: "bottom 700px", // Ajuste conforme necessário
 					// markers: true,
 					scrub: 3,
 				},
@@ -78,7 +130,7 @@ const AboutUs = () => {
 						/>
 						<S.CardSectionInfos
 							$side='left'
-							ref={titleScCtRef}>
+							ref={Infos01Ref}>
 							<h3>
 								<S.IconTitleCardSection01 /> Nossa missão
 							</h3>
@@ -102,9 +154,12 @@ const AboutUs = () => {
 					<S.OurCardSection $side='right'>
 						<S.CardSectionImage
 							src={picture2}
+							ref={img02Ref}
 							alt='Celular, caderno, caneta e pequenas plantas em um ambiente claro e branco'
 						/>
-						<S.CardSectionInfos $side='right'>
+						<S.CardSectionInfos
+							$side='right'
+							ref={Infos02Ref}>
 							<h3>
 								Nossa história <S.IconTitleCardSection02 />
 							</h3>
@@ -127,7 +182,7 @@ const AboutUs = () => {
 				</S.OurCardSectionContent>
 
 				<S.OurBrand>
-					<h3>
+					<h3 className='titleBrand'>
 						Cada símbolo na Sethe representa um pilar da nossa missão de
 						transformar sua contabilidade
 					</h3>
