@@ -92,22 +92,7 @@ const AboutUs = () => {
 				duration: 1,
 			},
 		);
-		gsap.fromTo(
-			".titleBrand",
-			{ y: 100, opacity: 0 },
-			{
-				scrollTrigger: {
-					trigger: ".titleBrand",
-					start: "top 650px", // Ajuste conforme necessário
-					end: "top 700px", // Ajuste conforme necessário
-					markers: true,
-					scrub: 3,
-				},
-				y: 0,
-				opacity: 1,
-				duration: 1,
-			},
-		);
+
 		gsap.fromTo(
 			img02,
 			{ x: 500, opacity: 0 },
@@ -120,6 +105,23 @@ const AboutUs = () => {
 					scrub: 3,
 				},
 				x: 0,
+				opacity: 1,
+				duration: 1,
+			},
+		);
+
+		gsap.fromTo(
+			".titleBrand",
+			{ y: 100, opacity: 0 },
+			{
+				scrollTrigger: {
+					trigger: ".titleBrand",
+					start: "top 650px", // Ajuste conforme necessário
+					end: "top 700px", // Ajuste conforme necessário
+					// markers: true,
+					scrub: 3,
+				},
+				y: 0,
 				opacity: 1,
 				duration: 1,
 			},
