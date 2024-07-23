@@ -25,6 +25,11 @@ const AboutUs = () => {
 	const Infos02Ref = useRef(null);
 	const img02Ref = useRef(null);
 
+	const somaRef = useRef(null);
+	const multRef = useRef(null);
+	const maiorRef = useRef(null);
+	const menorRef = useRef(null);
+
 	gsap.registerPlugin(ScrollTrigger);
 
 	useEffect(() => {
@@ -34,13 +39,18 @@ const AboutUs = () => {
 		const infos02 = Infos02Ref.current;
 		const img02 = img02Ref.current;
 
+		const soma = somaRef.current;
+		const mult = multRef.current;
+		const maior = maiorRef.current;
+		const menor = menorRef.current;
+
 		gsap.fromTo(
 			infos01,
 			{ x: 500, opacity: 0 },
 			{
 				scrollTrigger: {
 					trigger: infos01,
-					start: "bottom 650px", // Ajuste conforme necessário
+					start: "top 650px", // Ajuste conforme necessário
 					end: "top 700px", // Ajuste conforme necessário
 					// markers: true,
 					scrub: 3,
@@ -57,7 +67,7 @@ const AboutUs = () => {
 				scrollTrigger: {
 					trigger: img01,
 					start: "top 650px", // Ajuste conforme necessário
-					end: "bottom 700px", // Ajuste conforme necessário
+					end: "top 700px", // Ajuste conforme necessário
 					// markers: true,
 					scrub: 3,
 				},
@@ -73,7 +83,7 @@ const AboutUs = () => {
 				scrollTrigger: {
 					trigger: infos02,
 					start: "top 650px", // Ajuste conforme necessário
-					end: "bottom 700px", // Ajuste conforme necessário
+					end: "top 700px", // Ajuste conforme necessário
 					// markers: true,
 					scrub: 3,
 				},
@@ -84,12 +94,12 @@ const AboutUs = () => {
 		);
 		gsap.fromTo(
 			".titleBrand",
-			{ y: 300, opacity: 0 },
+			{ y: 100, opacity: 0 },
 			{
 				scrollTrigger: {
 					trigger: ".titleBrand",
 					start: "top 650px", // Ajuste conforme necessário
-					end: "bottom 700px", // Ajuste conforme necessário
+					end: "top 700px", // Ajuste conforme necessário
 					markers: true,
 					scrub: 3,
 				},
@@ -105,7 +115,7 @@ const AboutUs = () => {
 				scrollTrigger: {
 					trigger: img02,
 					start: "top 650px", // Ajuste conforme necessário
-					end: "bottom 700px", // Ajuste conforme necessário
+					end: "top 700px", // Ajuste conforme necessário
 					// markers: true,
 					scrub: 3,
 				},
@@ -114,6 +124,71 @@ const AboutUs = () => {
 				duration: 1,
 			},
 		);
+
+		tl.fromTo(
+			maior,
+			{ x: 200, opacity: 0 },
+			{
+				scrollTrigger: {
+					trigger: maior,
+					start: "top 650px", // Ajuste conforme necessário
+					end: "top 650px", // Ajuste conforme necessário
+					// markers: true,
+					scrub: 3,
+				},
+				x: 0,
+				opacity: 1,
+				duration: 1,
+			},
+		)
+			.fromTo(
+				soma,
+				{ x: 200, opacity: 0 },
+				{
+					scrollTrigger: {
+						trigger: soma,
+						start: "top 550px", // Ajuste conforme necessário
+						end: "top 650px", // Ajuste conforme necessário
+						// markers: true,
+						scrub: 3,
+					},
+					x: 0,
+					opacity: 1,
+					duration: 1,
+				},
+			)
+			.fromTo(
+				mult,
+				{ x: 200, opacity: 0 },
+				{
+					scrollTrigger: {
+						trigger: mult,
+						start: "top 450px", // Ajuste conforme necessário
+						end: "top 650px", // Ajuste conforme necessário
+						// markers: true,
+						scrub: 3,
+					},
+					x: 0,
+					opacity: 1,
+					duration: 1,
+				},
+			)
+			.fromTo(
+				menor,
+				{ x: 200, opacity: 0 },
+				{
+					scrollTrigger: {
+						trigger: maior,
+						start: "top 350px", // Ajuste conforme necessário
+						end: "top 650px", // Ajuste conforme necessário
+						// markers: true,
+						scrub: 3,
+					},
+					x: 0,
+					opacity: 1,
+					duration: 1,
+				},
+			);
 	}, []);
 
 	return (
@@ -188,7 +263,9 @@ const AboutUs = () => {
 					</h3>
 
 					<S.BrandCards>
-						<S.BrandSymbolCard symbol='maior'>
+						<S.BrandSymbolCard
+							$symbol='maior'
+							ref={maiorRef}>
 							<S.BrandSymbol src={maiorQue} />
 							<h4>MAIOR</h4>
 							<p>
@@ -197,7 +274,9 @@ const AboutUs = () => {
 							</p>
 						</S.BrandSymbolCard>
 
-						<S.BrandSymbolCard symbol='soma'>
+						<S.BrandSymbolCard
+							$symbol='soma'
+							ref={somaRef}>
 							<S.BrandSymbol
 								src={theme.title === "light" ? somaLight : somaDark}
 							/>
@@ -208,7 +287,9 @@ const AboutUs = () => {
 							</p>
 						</S.BrandSymbolCard>
 
-						<S.BrandSymbolCard symbol='multiplique'>
+						<S.BrandSymbolCard
+							$symbol='multiplique'
+							ref={multRef}>
 							<S.BrandSymbol src={mult} />
 							<h4>MULTIPLIQUE</h4>
 							<p>
@@ -217,7 +298,9 @@ const AboutUs = () => {
 							</p>
 						</S.BrandSymbolCard>
 
-						<S.BrandSymbolCard symbol='menor'>
+						<S.BrandSymbolCard
+							$symbol='menor'
+							ref={menorRef}>
 							<S.BrandSymbol
 								src={theme.title === "light" ? menorQueLight : menorQueDark}
 							/>

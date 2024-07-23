@@ -55,9 +55,7 @@ body{
   transition: all .3s ease-out;
   
   overflow-y: auto;
-}
-
- 
+} 
 
 *, button, input {
   border: 1;

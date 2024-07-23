@@ -267,8 +267,8 @@ export const BrandSymbolCard = styled.div`
 
 	h4 {
 		font-size: 3rem;
-		color: ${({ symbol, theme }) =>
-			symbol === "maior" || symbol === "multiplique"
+		color: ${({ $symbol, theme }) =>
+			$symbol === "maior" || $symbol === "multiplique"
 				? theme.colors.tertiary
 				: theme.colors.secondary};
 	}
