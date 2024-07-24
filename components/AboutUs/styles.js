@@ -10,6 +10,13 @@ export const Container = styled.section`
 	height: 100%;
 	min-height: 100vh;
 	padding: 6rem 0;
+
+	@media ${({ theme }) => theme.device.laptopL} {
+		padding: 5rem 0;
+	}
+	@media ${({ theme }) => theme.device.laptop} {
+		padding: 4rem 0;
+	}
 `;
 
 export const Content = styled.div`
@@ -18,6 +25,7 @@ export const Content = styled.div`
 	align-items: center;
 	gap: 5rem;
 	width: 90%;
+	max-width: 150rem;
 	text-align: center;
 
 	@media ${({ theme }) => theme.device.laptopL} {
@@ -50,6 +58,7 @@ export const OurCardSection = styled.div`
 	width: 100%;
 	gap: 5rem;
 	flex-direction: ${({ $side }) => ($side === "left" ? "row" : "row-reverse")};
+	padding-top: 2rem;
 
 	@media ${({ theme }) => theme.device.laptopL} {
 		gap: 4rem;
@@ -67,7 +76,7 @@ export const OurCardSection = styled.div`
 `;
 
 export const CardSectionImage = styled(Image)`
-	width: 50%;
+	width: 45%;
 	max-width: 75rem;
 	height: fit-content;
 
@@ -99,26 +108,26 @@ export const CardSectionInfos = styled.div`
 		align-items: center;
 		gap: 1rem;
 		font-weight: 700;
-		font-size: 5rem;
+		font-size: 4rem;
 		color: ${({ theme }) => theme.colors.tertiary};
 	}
 
 	h4 {
-		font-size: 3.3rem;
+		font-size: 2.7rem;
 		color: ${({ theme }) => theme.colors.tertiary};
 		font-weight: 600;
 	}
 
 	p {
 		padding: 1rem 0 2rem 0;
-		font-size: 2.2rem;
+		font-size: 2rem;
 		font-weight: 500;
 		color: ${({ theme }) => theme.colors.tertiary};
 	}
 
 	@media ${({ theme }) => theme.device.laptopL} {
 		h3 {
-			font-size: 4rem;
+			font-size: 3.2rem;
 		}
 		h4 {
 			font-size: 2.5rem;
@@ -130,7 +139,7 @@ export const CardSectionInfos = styled.div`
 
 	@media ${({ theme }) => theme.device.laptop} {
 		h3 {
-			font-size: 3rem;
+			font-size: 2.7rem;
 		}
 		h4 {
 			font-size: 2rem;
@@ -144,7 +153,7 @@ export const CardSectionInfos = styled.div`
 		align-items: center;
 		text-align: center;
 		h3 {
-			font-size: 2.6rem;
+			font-size: 2.5rem;
 		}
 		h4 {
 			font-size: 1.8rem;
@@ -156,7 +165,7 @@ export const CardSectionInfos = styled.div`
 	}
 	@media ${({ theme }) => theme.device.mobileL} {
 		h3 {
-			font-size: 2.4rem;
+			font-size: 2.2rem;
 		}
 		h4 {
 			font-size: 1.6rem;

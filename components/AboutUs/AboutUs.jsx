@@ -17,23 +17,23 @@ import mult from "@/public/images/mult.svg";
 import somaLight from "@/public/images/somaLight.svg";
 import somaDark from "@/public/images/somaDark.svg";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const AboutUs = () => {
 	const { theme } = useThemeContext();
 
+	// Referências
 	const Infos01Ref = useRef(null);
 	const img01Ref = useRef(null);
 	const Infos02Ref = useRef(null);
 	const img02Ref = useRef(null);
-
 	const somaRef = useRef(null);
 	const multRef = useRef(null);
 	const maiorRef = useRef(null);
 	const menorRef = useRef(null);
 
-	gsap.registerPlugin(ScrollTrigger);
-
+	// Animações
 	useEffect(() => {
-		const tl = gsap.timeline({ defaults: { opacity: 0 } });
 		const infos01 = Infos01Ref.current;
 		const img01 = img01Ref.current;
 		const infos02 = Infos02Ref.current;
@@ -44,14 +44,24 @@ const AboutUs = () => {
 		const maior = maiorRef.current;
 		const menor = menorRef.current;
 
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: maior,
+				start: "top 80%",
+				end: "top 20%",
+				scrub: 3,
+			},
+		});
+
+		// Animação dos Cards de informação
 		gsap.fromTo(
 			infos01,
 			{ x: 500, opacity: 0 },
 			{
 				scrollTrigger: {
 					trigger: infos01,
-					start: "top 650px", // Ajuste conforme necessário
-					end: "top 700px", // Ajuste conforme necessário
+					start: "top 60%",
+					end: "top 30%",
 					// markers: true,
 					scrub: 3,
 				},
@@ -66,8 +76,8 @@ const AboutUs = () => {
 			{
 				scrollTrigger: {
 					trigger: img01,
-					start: "top 650px", // Ajuste conforme necessário
-					end: "top 700px", // Ajuste conforme necessário
+					start: "top 60%",
+					end: "top 30%",
 					// markers: true,
 					scrub: 3,
 				},
@@ -82,8 +92,8 @@ const AboutUs = () => {
 			{
 				scrollTrigger: {
 					trigger: infos02,
-					start: "top 650px", // Ajuste conforme necessário
-					end: "top 700px", // Ajuste conforme necessário
+					start: "top 60%",
+					end: "top 30%",
 					// markers: true,
 					scrub: 3,
 				},
@@ -92,15 +102,14 @@ const AboutUs = () => {
 				duration: 1,
 			},
 		);
-
 		gsap.fromTo(
 			img02,
 			{ x: 500, opacity: 0 },
 			{
 				scrollTrigger: {
 					trigger: img02,
-					start: "top 650px", // Ajuste conforme necessário
-					end: "top 700px", // Ajuste conforme necessário
+					start: "top 60%",
+					end: "top 30%",
 					// markers: true,
 					scrub: 3,
 				},
@@ -109,15 +118,14 @@ const AboutUs = () => {
 				duration: 1,
 			},
 		);
-
 		gsap.fromTo(
 			".titleBrand",
 			{ y: 100, opacity: 0 },
 			{
 				scrollTrigger: {
 					trigger: ".titleBrand",
-					start: "top 650px", // Ajuste conforme necessário
-					end: "top 700px", // Ajuste conforme necessário
+					start: "top 60%",
+					end: "top 30%",
 					// markers: true,
 					scrub: 3,
 				},
@@ -127,17 +135,11 @@ const AboutUs = () => {
 			},
 		);
 
+		// Animação dos Símbolos
 		tl.fromTo(
 			maior,
 			{ x: 200, opacity: 0 },
 			{
-				scrollTrigger: {
-					trigger: maior,
-					start: "top 650px", // Ajuste conforme necessário
-					end: "top 650px", // Ajuste conforme necessário
-					// markers: true,
-					scrub: 3,
-				},
 				x: 0,
 				opacity: 1,
 				duration: 1,
@@ -147,13 +149,6 @@ const AboutUs = () => {
 				soma,
 				{ x: 200, opacity: 0 },
 				{
-					scrollTrigger: {
-						trigger: soma,
-						start: "top 550px", // Ajuste conforme necessário
-						end: "top 650px", // Ajuste conforme necessário
-						// markers: true,
-						scrub: 3,
-					},
 					x: 0,
 					opacity: 1,
 					duration: 1,
@@ -163,13 +158,6 @@ const AboutUs = () => {
 				mult,
 				{ x: 200, opacity: 0 },
 				{
-					scrollTrigger: {
-						trigger: mult,
-						start: "top 450px", // Ajuste conforme necessário
-						end: "top 650px", // Ajuste conforme necessário
-						// markers: true,
-						scrub: 3,
-					},
 					x: 0,
 					opacity: 1,
 					duration: 1,
@@ -179,13 +167,6 @@ const AboutUs = () => {
 				menor,
 				{ x: 200, opacity: 0 },
 				{
-					scrollTrigger: {
-						trigger: maior,
-						start: "top 350px", // Ajuste conforme necessário
-						end: "top 650px", // Ajuste conforme necessário
-						// markers: true,
-						scrub: 3,
-					},
 					x: 0,
 					opacity: 1,
 					duration: 1,
@@ -199,6 +180,7 @@ const AboutUs = () => {
 				<TitleSectionContent>Sobre nós</TitleSectionContent>
 
 				<S.OurCardSectionContent>
+					{/* Nossa missão */}
 					<S.OurCardSection $side='left'>
 						<S.CardSectionImage
 							ref={img01Ref}
@@ -228,6 +210,7 @@ const AboutUs = () => {
 						</S.CardSectionInfos>
 					</S.OurCardSection>
 
+					{/* Nossa história */}
 					<S.OurCardSection $side='right'>
 						<S.CardSectionImage
 							src={picture2}
@@ -258,6 +241,7 @@ const AboutUs = () => {
 					</S.OurCardSection>
 				</S.OurCardSectionContent>
 
+				{/* Nossa marca */}
 				<S.OurBrand>
 					<h3 className='titleBrand'>
 						Cada símbolo na Sethe representa um pilar da nossa missão de

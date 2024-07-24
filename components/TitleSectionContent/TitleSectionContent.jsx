@@ -2,14 +2,14 @@ import gsap from "gsap";
 import { Container, Symbol, Title } from "./styles";
 import symbol from "@/public/images/maiorQue.svg";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const TitleSectionContent = ({ children }) => {
-	gsap.registerPlugin(ScrollTrigger);
-
 	const ctRef = useRef(null);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		const ct = ctRef.current;
 
 		gsap.fromTo(
@@ -18,9 +18,9 @@ const TitleSectionContent = ({ children }) => {
 			{
 				scrollTrigger: {
 					trigger: ct,
-					start: "top 650px", // Ajuste conforme necessário
-					end: "bottom 700px", // Ajuste conforme necessário
-					scrub: 2,
+					start: "top 80%",
+					end: "top 20%",
+					scrub: 3,
 				},
 				x: 0,
 				opacity: 1,
