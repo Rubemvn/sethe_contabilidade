@@ -74,8 +74,8 @@ export const Service = styled.div`
 	align-items: center;
 	text-align: center;
 	border: 3px solid
-		${({ variation, theme }) =>
-			variation === "impar" ? theme.colors.secondary : theme.colors.tertiary};
+		${({ $variation, theme }) =>
+		$variation === "impar" ? theme.colors.secondary : theme.colors.tertiary};
 	border-radius: 1rem;
 	padding: 2rem;
 	gap: 1rem;
@@ -126,8 +126,8 @@ export const ServiceIMG = styled(Image)`
 export const ServiceText = styled.span`
 	font-size: 2.5rem;
 	font-weight: 700;
-	color: ${({ variation, theme }) =>
-		variation === "impar" ? theme.colors.tertiary : theme.colors.secondary};
+	color: ${({ $variation, theme }) =>
+		$variation === "impar" ? theme.colors.tertiary : theme.colors.secondary};
 
 	@media ${({ theme }) => theme.device.laptop} {
 		font-size: 1.9rem;

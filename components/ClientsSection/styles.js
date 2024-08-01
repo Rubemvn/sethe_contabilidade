@@ -39,3 +39,6 @@ export const Content = styled.div`
 		gap: 2.5rem;
 	}
 `;
+
+export const SectionInfosCLients = styled.div``
+export const CardsInfos = styled.div``

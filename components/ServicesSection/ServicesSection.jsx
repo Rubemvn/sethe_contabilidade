@@ -136,12 +136,12 @@ const ServicesSection = () => {
 				<S.Services>
 					<S.Service
 						ref={card01Ref}
-						variation='impar'>
+						$variation='impar'>
 						<S.ServiceIMG
 							src={contabilidadeGeral}
 							alt='ilustração de contabilidade geral'
 						/>
-						<S.ServiceText variation='impar'>
+						<S.ServiceText $variation='impar'>
 							Contabilidade
 							<br />
 							Geral
@@ -150,12 +150,12 @@ const ServicesSection = () => {
 
 					<S.Service
 						ref={card02Ref}
-						variation='par'>
+						$variation='par'>
 						<S.ServiceIMG
 							src={aberturaDeEmpresas}
 							alt='ilustração de abertura de empresas'
 						/>
-						<S.ServiceText variation='par'>
+						<S.ServiceText $variation='par'>
 							Abertura de
 							<br />
 							Empresas
@@ -164,12 +164,12 @@ const ServicesSection = () => {
 
 					<S.Service
 						ref={card03Ref}
-						variation='impar'>
+						$variation='impar'>
 						<S.ServiceIMG
 							src={assessoriaFiscal}
 							alt='ilustração de assessoria fiscal'
 						/>
-						<S.ServiceText variation='impar'>
+						<S.ServiceText $variation='impar'>
 							Assessoria
 							<br />
 							Fiscal
@@ -178,12 +178,12 @@ const ServicesSection = () => {
 
 					<S.Service
 						ref={card04Ref}
-						variation='par'>
+						$variation='par'>
 						<S.ServiceIMG
 							src={gestaoFinanceira}
 							alt='ilustração de gestão financeira'
 						/>
-						<S.ServiceText variation='par'>
+						<S.ServiceText $variation='par'>
 							Gestão
 							<br />
 							Financeira
@@ -192,12 +192,12 @@ const ServicesSection = () => {
 
 					<S.Service
 						ref={card05Ref}
-						variation='impar'>
+						$variation='impar'>
 						<S.ServiceIMG
 							src={departamentoPessoal}
 							alt='ilustração de departamento pessoal'
 						/>
-						<S.ServiceText variation='impar'>
+						<S.ServiceText $variation='impar'>
 							Departamento
 							<br />
 							Pessoal
@@ -206,12 +206,12 @@ const ServicesSection = () => {
 
 					<S.Service
 						ref={card06Ref}
-						variation='par'>
+						$variation='par'>
 						<S.ServiceIMG
 							src={consultoriaSocietaria}
 							alt='ilustração de consultoria societária'
 						/>
-						<S.ServiceText variation='par'>
+						<S.ServiceText $variation='par'>
 							Consultoria
 							<br />
 							Societária

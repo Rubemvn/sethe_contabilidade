@@ -6,9 +6,7 @@ const ClientsSection = () => {
 		<S.Container>
 			<S.Content>
 				<TitleSectionContent>Clientes</TitleSectionContent>
-				<S.CardsClients>
-					<S.CardInfos></S.CardInfos>
-				</S.CardsClients>
+				<S.SectionInfosCLients></S.SectionInfosCLients>
 			</S.Content>
 		</S.Container>
 	);
