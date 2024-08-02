@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styled from "styled-components";
 
 export const Container = styled.section`
@@ -40,5 +41,12 @@ export const Content = styled.div`
 	}
 `;
 
-export const SectionInfosCLients = styled.div``
-export const CardsInfos = styled.div``
+export const SectionInfosCLients = styled.div``;
+
+export const CardInfoClient = styled.div``;
+
+export const ImageInfo = styled(Image)``;
+
+export const TitleSectionInfo = styled.span``;
+
+export const DescriptionSectionInfo = styled.span``;
