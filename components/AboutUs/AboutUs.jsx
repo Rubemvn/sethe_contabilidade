@@ -124,8 +124,8 @@ const AboutUs = () => {
 			{
 				scrollTrigger: {
 					trigger: ".titleBrand",
-					start: "top 60%",
-					end: "top 30%",
+					start: "top 100%",
+					end: "top 80%",
 					// markers: true,
 					scrub: 3,
 				},

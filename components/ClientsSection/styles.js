@@ -21,7 +21,7 @@ export const Content = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 6rem;
+	gap: 5rem;
 	width: 90%;
 	max-width: 150rem;
 	text-align: center;
@@ -41,12 +41,88 @@ export const Content = styled.div`
 	}
 `;
 
-export const SectionInfosCLients = styled.div``;
+export const SectionInfosCLients = styled.div`
+	display: flex;
+	align-items: top;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 3rem;
+`;
 
-export const CardInfoClient = styled.div``;
+export const CardInfoClient = styled.div`
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	max-width: 34rem;
+	width: 100%;
+	opacity: 0;
+`;
 
-export const ImageInfo = styled(Image)``;
+export const ImageInfo = styled(Image)`
+	width: 14.5rem;
+	height: auto;
+	margin-bottom: 1.5rem;
+`;
 
-export const TitleSectionInfo = styled.span``;
+export const TitleSectionInfo = styled.span`
+	font-size: 2.6rem;
+	font-weight: 600;
+	color: ${({ theme }) => theme.colors.tertiary};
+`;
 
-export const DescriptionSectionInfo = styled.span``;
+export const DescriptionSectionInfo = styled.span`
+	font-size: 1.8rem;
+	font-weight: 400;
+	color: ${({ theme }) => theme.colors.tertiary};
+`;
+
+export const Symbols = styled(Image)`
+	width: 22rem;
+	@media ${({ theme }) => theme.device.laptop} {
+		width: 20rem;
+	}
+	@media ${({ theme }) => theme.device.tablet} {
+		width: 18rem;
+	}
+	@media ${({ theme }) => theme.device.mobileL} {
+		width: 16rem;
+	}
+	@media ${({ theme }) => theme.device.mobileM} {
+		width: 15rem;
+	}
+	@media ${({ theme }) => theme.device.mobileS} {
+		width: 14rem;
+	}
+`;
+
+export const ClientsContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5rem;
+	width: 80%;
+	border: 2px solid ${({ theme }) => theme.colors.tertiary};
+	border-radius: 1rem;
+	padding: 2rem 0 4rem 0;
+	flex-wrap: wrap;
+`;
+
+export const TitleClientsContainer = styled.span`
+	font-size: 3rem;
+	font-weight: 600;
+	color: ${({ theme }) => theme.colors.tertiary};
+`;
+
+export const ClientsLogos = styled.div`
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	gap: 2rem;
+	flex-wrap: wrap;
+`;
+
+export const Client = styled(Image)`
+	width: 10rem;
+	height: auto;
+`;
