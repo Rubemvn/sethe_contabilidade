@@ -1,6 +1,5 @@
 // Components
 import TitleSectionContent from "../TitleSectionContent/TitleSectionContent";
-import Link from "next/link";
 import * as S from "./styles";
 // Images
 import satisfacao from "@/public/images/satisfação garantida.svg";
@@ -9,9 +8,11 @@ import maisClientes from "@/public/images/+100 clientes.svg";
 import symbolsL from "@/public/images/symbolsSmallLight.svg";
 import symbolsD from "@/public/images/symbolsSmallDark.svg";
 import mais1cafe from "@/public/images/mais1cafe.png";
-import laranjinha from "@/public/images/laranjinha 1.png";
+import potencial from "@/public/images/potencial.png";
 import pingo from "@/public/images/pingo 1.png";
 import rta from "@/public/images/RTA 1.png";
+import facilite from "@/public/images/facilite.png";
+import cecy from "@/public/images/cecy.png";
 // hooks
 import { useThemeContext } from "@/hooks/useThemeContext";
 import { useEffect, useRef } from "react";
@@ -29,6 +30,7 @@ const ClientsSection = () => {
 	const cardInfo03Ref = useRef(null);
 	const symbols01Ref = useRef(null);
 	const symbols02Ref = useRef(null);
+	const clientsRef = useRef(null);
 
 	useEffect(() => {
 		const cdIf01 = cardInfo01Ref.current;
@@ -36,6 +38,7 @@ const ClientsSection = () => {
 		const cdIf03 = cardInfo03Ref.current;
 		const smbs01 = symbols01Ref.current;
 		const smbs02 = symbols02Ref.current;
+		const clts = clientsRef.current;
 
 		const tl01 = gsap.timeline({
 			scrollTrigger: {
@@ -82,7 +85,6 @@ const ClientsSection = () => {
 					trigger: smbs01,
 					start: "top 90%",
 					end: "top 70%",
-					markers: true,
 					scrub: 3,
 				},
 				opacity: 1,
@@ -97,7 +99,21 @@ const ClientsSection = () => {
 					trigger: smbs02,
 					start: "top 90%",
 					end: "top 70%",
-					markers: true,
+					scrub: 3,
+				},
+				opacity: 1,
+				x: 0,
+			},
+		);
+		// clients
+		gsap.fromTo(
+			clts,
+			{ opacity: 0, x: 400 },
+			{
+				scrollTrigger: {
+					trigger: clts,
+					start: "top 90%",
+					end: "top 80%",
 					scrub: 3,
 				},
 				opacity: 1,
@@ -152,43 +168,38 @@ const ClientsSection = () => {
 					ref={symbols01Ref}
 				/>
 
-				<S.ClientsContainer>
+				<S.ClientsContainer ref={clientsRef}>
 					<S.TitleClientsContainer>
 						Clientes que confiam na sethe
 					</S.TitleClientsContainer>
 					<S.ClientsLogos>
-						<Link
-							href={"/"}
-							target='_blank'>
-							<S.Client
-								src={mais1cafe}
-								alt='mais 1 café'
-							/>
-						</Link>
-						<Link
-							href={"/"}
-							target='_blank'>
-							<S.Client
-								src={laranjinha}
-								alt='laranjinha'
-							/>
-						</Link>
-						<Link
-							href={"/"}
-							target='_blank'>
-							<S.Client
-								src={pingo}
-								alt='pingo'
-							/>
-						</Link>
-						<Link
-							href={"/"}
-							target='_blank'>
-							<S.Client
-								src={rta}
-								alt='RTA'
-							/>
-						</Link>
+						<S.Client
+							src={mais1cafe}
+							alt='mais 1 café'
+						/>
+
+						<S.Client
+							src={potencial}
+							alt='Potencial Engenharia'
+						/>
+
+						<S.Client
+							src={pingo}
+							alt='pingo'
+						/>
+
+						<S.Client
+							src={rta}
+							alt='RTA'
+						/>
+						<S.Client
+							src={facilite}
+							alt='facilite'
+						/>
+						<S.Client
+							src={cecy}
+							alt='Cecy'
+						/>
 					</S.ClientsLogos>
 				</S.ClientsContainer>
 

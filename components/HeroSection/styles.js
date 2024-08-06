@@ -110,7 +110,10 @@ export const TextContainer = styled.p`
 	width: 100%;
 	max-width: 58rem;
 	font-weight: 500;
-	color: ${({ theme }) => theme.colors.tertiary};
+	color: ${({ theme }) =>
+		theme.title === "light"
+			? theme.colors.dark_slate_gray
+			: theme.colors.medium_aquamarine};
 	opacity: 0;
 
 	@media ${({ theme }) => theme.device.laptopL} {
