@@ -43,7 +43,7 @@ const ServicesSection = () => {
 			scrollTrigger: {
 				trigger: cd01,
 				start: "top 80%",
-				end: "top 20%",
+				end: "top 60%",
 				scrub: 3,
 			},
 		});

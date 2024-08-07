@@ -4,6 +4,7 @@ import HeroSection from "../HeroSection/HeroSection";
 import AboutUs from "../AboutUs/AboutUs";
 import ServicesSection from "../ServicesSection/ServicesSection";
 import ClientsSection from "../ClientsSection/ClientsSection";
+import Footer from "../Footer/Footer";
 
 const ContentHome = () => {
 	return (
@@ -12,6 +13,7 @@ const ContentHome = () => {
 			<AboutUs />
 			<ServicesSection />
 			<ClientsSection />
+			<Footer />
 		</Container>
 	);
 };

@@ -48,7 +48,7 @@ const AboutUs = () => {
 			scrollTrigger: {
 				trigger: maior,
 				start: "top 80%",
-				end: "top 20%",
+				end: "top 60%",
 				scrub: 3,
 			},
 		});
@@ -60,8 +60,8 @@ const AboutUs = () => {
 			{
 				scrollTrigger: {
 					trigger: infos01,
-					start: "top 60%",
-					end: "top 30%",
+					start: "top 80%",
+					end: "top 60%",
 					// markers: true,
 					scrub: 3,
 				},
@@ -76,8 +76,8 @@ const AboutUs = () => {
 			{
 				scrollTrigger: {
 					trigger: img01,
-					start: "top 60%",
-					end: "top 30%",
+					start: "top 80%",
+					end: "top 60%",
 					// markers: true,
 					scrub: 3,
 				},
@@ -92,8 +92,8 @@ const AboutUs = () => {
 			{
 				scrollTrigger: {
 					trigger: infos02,
-					start: "top 60%",
-					end: "top 30%",
+					start: "top 80%",
+					end: "top 60%",
 					// markers: true,
 					scrub: 3,
 				},
@@ -108,8 +108,8 @@ const AboutUs = () => {
 			{
 				scrollTrigger: {
 					trigger: img02,
-					start: "top 60%",
-					end: "top 30%",
+					start: "top 80%",
+					end: "top 60%",
 					// markers: true,
 					scrub: 3,
 				},

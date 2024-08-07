@@ -19,7 +19,7 @@ const TitleSectionContent = ({ children }) => {
 				scrollTrigger: {
 					trigger: ct,
 					start: "top 80%",
-					end: "top 20%",
+					end: "top 60%",
 					scrub: 3,
 				},
 				x: 0,
