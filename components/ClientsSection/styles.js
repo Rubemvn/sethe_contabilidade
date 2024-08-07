@@ -165,6 +165,25 @@ export const TitleClientsContainer = styled.span`
 	font-size: 3rem;
 	font-weight: 600;
 	color: ${({ theme }) => theme.colors.tertiary};
+
+	@media ${({ theme }) => theme.device.laptopL} {
+		font-size: 2.7rem;
+	}
+	@media ${({ theme }) => theme.device.laptop} {
+		font-size: 2.4rem;
+	}
+	@media ${({ theme }) => theme.device.tablet} {
+		font-size: 2.2rem;
+	}
+	@media ${({ theme }) => theme.device.mobileL} {
+		font-size: 2rem;
+	}
+	@media ${({ theme }) => theme.device.mobileM} {
+		font-size: 1.8rem;
+	}
+	@media ${({ theme }) => theme.device.mobileS} {
+		font-size: 1.6rem;
+	}
 `;
 
 export const ClientsLogos = styled.div`
@@ -178,6 +197,9 @@ export const ClientsLogos = styled.div`
 	@media ${({ theme }) => theme.device.tablet} {
 		gap: 4rem;
 	}
+	@media ${({ theme }) => theme.device.mobileM} {
+		gap: 3rem;
+	}
 `;
 
 export const Client = styled(Image)`
@@ -189,5 +211,8 @@ export const Client = styled(Image)`
 	}
 	@media ${({ theme }) => theme.device.mobileL} {
 		width: 8rem;
+	}
+	@media ${({ theme }) => theme.device.mobileS} {
+		width: 6rem;
 	}
 `;
