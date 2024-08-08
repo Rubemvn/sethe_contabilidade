@@ -1,7 +1,7 @@
 import ToggleTheme from "../ToggleTheme/ToggleTheme";
 import { FaWhatsapp } from "react-icons/fa";
 import * as S from "./styles";
-import logoLight from "@/public/images/logoLight.svg";
+import logoLight from "@/public/images/logoLight copy.svg";
 import logoDark from "@/public/images/logoDark.svg";
 import symbolsLight from "@/public/images/symbolsFooterLight.svg";
 import symbolsDark from "@/public/images/symbolsFooterDark.svg";
@@ -16,7 +16,7 @@ const Footer = () => {
 
 	return (
 		<>
-			<S.Container>
+			<S.Container id='section'>
 				<S.Content>
 					<S.CategoryContainer className='container'>
 						<S.Title>CATEGORIAS</S.Title>
