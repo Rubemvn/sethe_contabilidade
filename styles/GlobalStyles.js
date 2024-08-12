@@ -4,8 +4,8 @@ import { createGlobalStyle } from "styled-components";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
-	subsets: ["latin"],
-	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export default createGlobalStyle`
@@ -31,7 +31,7 @@ html{
   font-size: 62.5%;
   size: 62.5%;
   scroll-behavior: smooth;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 html, body, :root{
@@ -54,7 +54,7 @@ body{
   
   transition: all .3s ease-out;
   
-  overflow-y: auto;
+  /* overflow-y: auto; */
 } 
 
 *, button, input {
