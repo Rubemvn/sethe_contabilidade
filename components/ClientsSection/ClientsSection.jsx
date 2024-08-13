@@ -4,7 +4,7 @@ import * as S from "./styles";
 // Images
 import satisfacao from "@/public/images/satisfação garantida.svg";
 import crescimento from "@/public/images/crescimento continuo.svg";
-import maisClientes from "@/public/images/+100 clientes.svg";
+import maisClientes from "@/public/images/mais de 100 clientes.svg";
 import symbolsL from "@/public/images/symbolsSmallLight.svg";
 import symbolsD from "@/public/images/symbolsSmallDark.svg";
 import mais1cafe from "@/public/images/mais1cafe.png";

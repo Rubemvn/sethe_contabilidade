@@ -26,7 +26,6 @@ const Footer = () => {
 							<S.Category href={"#aboutUs"}>Sobre nós</S.Category>
 							<S.Category href={"#clients"}>Clientes</S.Category>
 						</S.Categories>
-						<ToggleTheme />
 					</S.CategoryContainer>
 
 					<S.SetheContainer className='container'>
@@ -34,7 +33,9 @@ const Footer = () => {
 							src={theme.title === "light" ? logoLight : logoDark}
 							alt='Sethe Soluções Contábeis'
 						/>
-						<S.ButtonContact href={"/"}>
+						<S.ButtonContact
+							href={"https://wa.me/558630150480"}
+							target='_blank'>
 							Contate-nos <FaWhatsapp />
 						</S.ButtonContact>
 						<S.OpenQuotes>{"“"}</S.OpenQuotes>
@@ -48,7 +49,9 @@ const Footer = () => {
 						<S.Contacts>
 							<S.TitleContact>CONTATO</S.TitleContact>
 
-							<S.ContactLink href={""}>
+							<S.ContactLink
+								href={"mailto:escritorio@sethecontabilidade.com.br"}
+								target='_blank'>
 								<span>escritorio@sethecontabilidade.com.br</span>
 								<MdOutlineMailOutline />
 							</S.ContactLink>
@@ -58,11 +61,15 @@ const Footer = () => {
 								<span>@sethecontabilidade</span>
 								<FaInstagram />
 							</S.ContactLink>
-							<S.ContactLink href={""}>
+							<S.ContactLink
+								href={"tel:+558630150480"}
+								target='_blank'>
 								<span>86 3015-0480</span>
 								<BsTelephone />
 							</S.ContactLink>
-							<S.ContactLink href={""}>
+							<S.ContactLink
+								href={"https://maps.app.goo.gl/ibSGxhpWKHSZRxhw7"}
+								target='_blank'>
 								<span>
 									Rua Thomaz Tajra, 1200 - Sala 9 - Jóquei, Teresina - PI,
 									64048-380
