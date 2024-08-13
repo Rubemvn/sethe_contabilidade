@@ -13,6 +13,7 @@ export const Container = styled.button`
 	justify-content: center;
 	align-items: center;
 	padding: 1rem;
+	opacity: 0;
 	border-radius: 5rem;
 	background-color: ${({ theme }) => theme.colors.primary};
 	border: 3px solid ${({ theme }) => theme.colors.secondary};
