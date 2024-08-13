@@ -16,15 +16,15 @@ export const metadata = {
 	openGraph: {
 		type: "website",
 		url: "https://www.sethecontabilidade.com.br",
-		title: "Sethe Contabilidade - Soluções Contábeis de Qualidade",
+		title: "Sethe Contabilidade - Soluções Contábeis",
 		description:
 			"A Sethe Contabilidade oferece serviços contábeis completos para pequenas e médias empresas.",
 		images: [
 			{
-				url: "/images/sethe_bg.svg",
+				url: "/images/sethe_bg.jpg",
 				width: 1200,
 				height: 900,
-				alt: "Sethe Contabilidade - Soluções Contábeis de Qualidade",
+				alt: "Sethe Contabilidade - Soluções Contábeis",
 			},
 		],
 		site_name: "Sethe Contabilidade",
@@ -32,7 +32,7 @@ export const metadata = {
 			title: "Sethe Contabilidade - Soluções Contábeis de Qualidade",
 			description:
 				"Serviços contábeis completos para pequenas e médias empresas.",
-			image: "/images/sethe_bg.svg",
+			image: "/images/sethe_bg.jpg",
 		},
 	},
 };
