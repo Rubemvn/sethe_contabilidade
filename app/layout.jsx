@@ -19,14 +19,7 @@ export const metadata = {
 		title: "Sethe Contabilidade - Soluções Contábeis",
 		description:
 			"A Sethe Contabilidade oferece serviços contábeis completos para pequenas e médias empresas.",
-		images: [
-			{
-				url: "/images/sethe_bg.jpg",
-				width: 800,
-				height: 600,
-				alt: "Sethe Contabilidade - Soluções Contábeis",
-			},
-		],
+		images: ["/images/sethe_bg.jpg"],
 		site_name: "Sethe Contabilidade",
 		twitter: {
 			title: "Sethe Contabilidade - Soluções Contábeis de Qualidade",

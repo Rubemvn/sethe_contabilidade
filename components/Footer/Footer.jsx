@@ -79,7 +79,7 @@ const Footer = () => {
 						</S.Contacts>
 
 						<S.TeamContainer>
-							<S.TitleTeam>EQUIPE</S.TitleTeam>
+							<S.TitleTeam>FUNDADORES</S.TitleTeam>
 							<S.Member>
 								<S.Name>Amanda Moura</S.Name>
 								<S.CRC>CRC: 11799</S.CRC>

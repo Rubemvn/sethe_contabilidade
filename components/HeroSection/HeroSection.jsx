@@ -133,11 +133,10 @@ const HeroSection = () => {
 
 					<ButtonsContainer ref={btnCtRef}>
 						<ButtonContact>CONHEÇA A SETHE</ButtonContact>
-						<SocialMediaButton href='/'>
+						<SocialMediaButton
+							href='https://www.instagram.com/sethecontabilidade/'
+							target='_blank'>
 							<FaInstagram />
-						</SocialMediaButton>
-						<SocialMediaButton href='/'>
-							<FaWhatsapp />
 						</SocialMediaButton>
 					</ButtonsContainer>
 

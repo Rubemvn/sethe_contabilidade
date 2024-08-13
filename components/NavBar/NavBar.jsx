@@ -35,7 +35,6 @@ const NavBar = () => {
 
 	useEffect(() => {
 		const tl = gsap.timeline({ defaults: { duration: 0.3 } });
-		const listOfLinks = listOfLinksRef.current;
 
 		if (menuToggle) {
 			tl.to(".line1", { rotate: -45, width: 35, y: 10.5 })

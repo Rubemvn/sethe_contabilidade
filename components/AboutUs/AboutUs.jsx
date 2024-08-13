@@ -193,16 +193,16 @@ const AboutUs = () => {
 							<h3>
 								<S.IconTitleCardSection01 /> Nossa missão
 							</h3>
-							<h4>Lorem Ipsum is simply dummy text.</h4>
+							<h4>Serviços contábeis com excelência e foco no crescimento.</h4>
 							<p>
-								Lorem Ipsum is simply dummy text of the printing and typesetting
-								industry. Lorem Ipsum has been the industry's standard dummy
-								text ever since the 1500s, when an unknown printer took a galley
-								of type and scrambled it to make a type specimen book. It has
-								survived not only five centuries, but also the leap into
-								electronic typesetting, remaining essentially unchanged. It was
-								popularised in the 1960s with the release of Letraset sheets
-								containing Lorem Ipsum
+								Nossa missão é ser o parceiro confiável de empresas, oferecendo
+								soluções contábeis que combinam competência técnica, eficiência
+								e comunicação clara. Trabalhamos com precisão para assegurar
+								conformidade legal e suporte acessível, impulsionando o sucesso
+								de nossos clientes. Oferecemos uma abordagem personalizada que
+								entende as necessidades únicas de cada negócio, desde a abertura
+								de empresas até a gestão financeira e consultoria societária,
+								sempre com o compromisso de promover o crescimento sustentável.
 							</p>
 							<S.Symbols
 								src={theme.title === "light" ? symbolsLight : symbolsDark}
@@ -223,16 +223,20 @@ const AboutUs = () => {
 							<h3>
 								Nossa história <S.IconTitleCardSection02 />
 							</h3>
-							<h4>Lorem Ipsum is simply dummy text.</h4>
+							<h4>
+								Fundada para transformar contabilidade em estratégia para o
+								sucesso dos clientes.
+							</h4>
 							<p>
-								Lorem Ipsum is simply dummy text of the printing and typesetting
-								industry. Lorem Ipsum has been the industry's standard dummy
-								text ever since the 1500s, when an unknown printer took a galley
-								of type and scrambled it to make a type specimen book. It has
-								survived not only five centuries, but also the leap into
-								electronic typesetting, remaining essentially unchanged. It was
-								popularised in the 1960s with the release of Letraset sheets
-								containing Lorem Ipsum
+								A Sethe Contabilidade nasceu para oferecer um serviço contábil
+								que une expertise técnica a uma abordagem humanizada.
+								Transformamos a contabilidade em uma ferramenta de gestão
+								estratégica, com foco nas necessidades dos clientes. Com uma
+								equipe experiente, oferecemos serviços completos, como
+								contabilidade tradicional e consultoria fiscal. Investimos em
+								tecnologia e processos eficientes para garantir um atendimento
+								personalizado e de alta qualidade, sendo um parceiro confiável
+								para o crescimento dos negócios.
 							</p>
 							<S.Symbols
 								src={theme.title === "light" ? symbolsLight : symbolsDark}
