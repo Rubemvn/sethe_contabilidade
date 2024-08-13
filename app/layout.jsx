@@ -22,8 +22,8 @@ export const metadata = {
 		images: [
 			{
 				url: "/images/sethe_bg.jpg",
-				width: 1200,
-				height: 900,
+				width: 800,
+				height: 600,
 				alt: "Sethe Contabilidade - Soluções Contábeis",
 			},
 		],
