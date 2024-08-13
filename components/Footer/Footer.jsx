@@ -21,10 +21,10 @@ const Footer = () => {
 					<S.CategoryContainer className='container'>
 						<S.Title>CATEGORIAS</S.Title>
 						<S.Categories>
-							<S.Category href={"/"}>Home</S.Category>
-							<S.Category href={"/"}>Serviços</S.Category>
-							<S.Category href={"/"}>Sobre nós</S.Category>
-							<S.Category href={"/"}>Clientes</S.Category>
+							<S.Category href={"#home"}>Home</S.Category>
+							<S.Category href={"#services"}>Serviços</S.Category>
+							<S.Category href={"#aboutUs"}>Sobre nós</S.Category>
+							<S.Category href={"#clients"}>Clientes</S.Category>
 						</S.Categories>
 						<ToggleTheme />
 					</S.CategoryContainer>
@@ -42,10 +42,6 @@ const Footer = () => {
 							O futuro pertence àqueles que acreditam na beleza de seus sonhos.
 						</S.Phrase>
 						<S.Author>- Eleanor Roosevelt</S.Author>
-						<S.Symbols
-							src={theme.title === "light" ? symbolsLight : symbolsDark}
-							alt='Símbolos da sethe'
-						/>
 					</S.SetheContainer>
 
 					<S.InfosContainer className='container'>
@@ -88,6 +84,11 @@ const Footer = () => {
 						</S.TeamContainer>
 					</S.InfosContainer>
 				</S.Content>
+
+				<S.Symbols
+					src={theme.title === "light" ? symbolsLight : symbolsDark}
+					alt='Símbolos da sethe'
+				/>
 			</S.Container>
 
 			<S.FooterContainer>

@@ -9,14 +9,15 @@ export const Container = styled.section`
 	width: 100%;
 	height: 100%;
 	min-height: 52rem;
-	padding: 3rem 0;
+	padding: 3rem 0 0 0;
+	gap: 3rem;
 	background-color: ${({ theme }) =>
 		theme.title === "light"
 			? theme.colors.medium_aquamarine
 			: theme.colors.dark_slate_gray};
 
 	@media ${({ theme }) => theme.device.laptopL} {
-		padding: 2rem 0;
+		padding: 2rem 0 0 0;
 	}
 	@media ${({ theme }) => theme.device.laptop} {
 		/* padding: 4rem 0; */
@@ -34,14 +35,21 @@ export const Content = styled.div`
 	text-align: center;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
-
+	
 	.container {
 		width: 30%;
 		min-width: 40rem;
 	}
-
+	
 	@media ${({ theme }) => theme.device.laptopL} {
 		width: 95%;
+		gap: 5rem;
+		
+		.container {
+			width: 47%;
+			min-width: 46rem;
+		}
+
 	}
 	@media ${({ theme }) => theme.device.tablet} {
 	}
@@ -57,6 +65,11 @@ export const CategoryContainer = styled.div`
 	align-items: flex-start;
 	text-align: left;
 	gap: 2rem;
+	
+	@media ${({ theme }) => theme.device.laptopL} {
+		align-items: center;
+		text-align: center;
+	}
 `;
 
 export const Title = styled.span`
@@ -136,27 +149,44 @@ export const Author = styled.p`
 			: theme.colors.medium_aquamarine};
 `;
 
-export const Symbols = styled(Image)``;
+export const Symbols = styled(Image)`
+
+@media ${({ theme }) => theme.device.laptopL} {
+		margin-bottom: 3rem;
+	}
+`;
 
 export const InfosContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 	justify-content: space-between;
-`;
+	gap: 2rem;
+
+	@media ${({ theme }) => theme.device.laptopL} {
+		align-items: center;
+		text-align: center;
+		width: 90rem;
+	}
+	`;
 
 export const Contacts = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 	gap: 2.5rem;
-`;
+	
+	@media ${({ theme }) => theme.device.laptopL} {
+		align-items: center;
+		text-align: center;
+	}
+	`;
 
 export const TitleContact = styled.span`
 	font-size: 3rem;
 	font-weight: 700;
 	color: ${({ theme }) => theme.colors.white};
-`;
+	`;
 
 export const ContactLink = styled(Link)`
 	display: flex;
@@ -171,11 +201,15 @@ export const ContactLink = styled(Link)`
 	span {
 		font-size: 1.8rem;
 		color: ${({ theme }) =>
-			theme.title === "light"
-				? theme.colors.dark_slate_gray
-				: theme.colors.medium_aquamarine};
+		theme.title === "light"
+			? theme.colors.dark_slate_gray
+			: theme.colors.medium_aquamarine};
 	}
-`;
+	
+	@media ${({ theme }) => theme.device.laptopL} {
+		text-align: center;
+	}
+	`;
 
 export const TeamContainer = styled.div`
 	display: flex;
@@ -183,10 +217,15 @@ export const TeamContainer = styled.div`
 	align-items: flex-end;
 	text-align: right;
 	gap: 1rem;
+
+		@media ${({ theme }) => theme.device.laptopL} {
+		align-items: center;
+		text-align: center;
+	}
 `;
 
 export const TitleTeam = styled.span`
-	font-size: 2.6rem;
+	font-size: 2.4rem;
 	font-weight: 700;
 	color: ${({ theme }) => theme.colors.white};
 `;
@@ -195,6 +234,10 @@ export const Member = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
+
+		@media ${({ theme }) => theme.device.laptopL} {
+		align-items: center;
+	}
 `;
 
 export const Name = styled.span`

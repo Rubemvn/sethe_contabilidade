@@ -123,7 +123,7 @@ const ClientsSection = () => {
 	}, []);
 
 	return (
-		<S.Container>
+		<S.Container id='clients'>
 			<S.Content>
 				<TitleSectionContent>Clientes</TitleSectionContent>
 

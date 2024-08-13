@@ -84,13 +84,13 @@ const NavBar = () => {
 					<div className='listLinks'>
 						<ListOfLinks ref={listOfLinksRef}>
 							<li>
-								<LinkTo href={"/"}>Início</LinkTo>
+								<LinkTo href={"#home"}>Início</LinkTo>
 							</li>
 							<li>
-								<LinkTo href={"/"}>Sobre Nós</LinkTo>
+								<LinkTo href={"#aboutUs"}>Sobre Nós</LinkTo>
 							</li>
 							<li>
-								<LinkTo href={"/"}>Clientes</LinkTo>
+								<LinkTo href={"#clients"}>Clientes</LinkTo>
 							</li>
 							<li>
 								<ButtonContact>Contate-nos</ButtonContact>

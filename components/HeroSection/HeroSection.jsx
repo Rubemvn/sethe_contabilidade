@@ -103,7 +103,7 @@ const HeroSection = () => {
 	}, []);
 
 	return (
-		<Container>
+		<Container id='home'>
 			<Content>
 				<WelcomeContainer>
 					<TitleContainer>

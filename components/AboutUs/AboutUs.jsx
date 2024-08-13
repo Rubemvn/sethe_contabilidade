@@ -175,7 +175,7 @@ const AboutUs = () => {
 	}, []);
 
 	return (
-		<S.Container>
+		<S.Container id='aboutUs'>
 			<S.Content>
 				<TitleSectionContent>Sobre nós</TitleSectionContent>
 
