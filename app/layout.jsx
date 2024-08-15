@@ -11,7 +11,7 @@ export const metadata = {
 		appleTouchIcon: ["/icons/apple-touch-icon.png"],
 	},
 	keywords:
-		"contabilidade, serviços contábeis, gestão financeira, consultoria empresarial, pequenas empresas, médias empresas, sethe",
+		"contabilidade, serviços contábeis, gestão financeira, consultoria empresarial, pequenas empresas, médias empresas, sethe, empresas de contabilidade, empresas de teresina",
 	author: "Sethe Contabilidade",
 	openGraph: {
 		type: "website",
