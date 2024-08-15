@@ -13,6 +13,8 @@ import pingo from "@/public/images/pingo 1.png";
 import rta from "@/public/images/RTA 1.png";
 import facilite from "@/public/images/facilite.png";
 import cecy from "@/public/images/cecy.png";
+import oncobem from "@/public/images/oncobem.png";
+import seEng from "@/public/images/seEng.jpg";
 // hooks
 import { useThemeContext } from "@/hooks/useThemeContext";
 import { useEffect, useRef } from "react";
@@ -199,6 +201,14 @@ const ClientsSection = () => {
 						<S.Client
 							src={cecy}
 							alt='Cecy'
+						/>
+						<S.Client
+							src={oncobem}
+							alt='Oncobem'
+						/>
+						<S.Client
+							src={seEng}
+							alt='SE Engenharia'
 						/>
 					</S.ClientsLogos>
 				</S.ClientsContainer>
