@@ -190,7 +190,7 @@ export const ClientsLogos = styled.div`
 	display: flex;
 	width: 100%;
 	justify-content: space-evenly;
-	gap: 2rem;
+	gap: 6rem;
 	flex-wrap: wrap;
 	align-items: center;
 
