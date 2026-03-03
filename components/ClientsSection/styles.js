@@ -216,3 +216,29 @@ export const Client = styled(Image)`
 		width: 6rem;
 	}
 `;
+
+export const PartnersContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5rem;
+	width: 80%;
+	/* border: 2px solid
+		${({ theme }) =>
+			theme.title === "light"
+				? theme.colors.dark_slate_gray
+				: theme.colors.medium_aquamarine}; */
+	/* border-radius: 1rem; */
+	padding: 2rem 0 4rem 0;
+	flex-wrap: wrap;
+
+	@media ${({ theme }) => theme.device.laptopL} {
+		width: 95%;
+		gap: 4rem;
+	}
+	@media ${({ theme }) => theme.device.tablet} {
+		width: 97%;
+		padding: 2rem 1rem 2rem 1rem;
+		gap: 3rem;
+	}
+`;

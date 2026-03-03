@@ -1,4 +1,5 @@
 // Components
+import Link from "next/link";
 import TitleSectionContent from "../TitleSectionContent/TitleSectionContent";
 import * as S from "./styles";
 // Images
@@ -17,6 +18,7 @@ import oncobem from "@/public/images/oncobem.png";
 import seEng from "@/public/images/seEng.jpg";
 import serveFacil from "@/public/images/serve facil.jpeg";
 import logoUltraX from "@/public/images/logo-ultra-x.png";
+import finep from "@/public/images/finep.jpeg";
 // hooks
 import { useThemeContext } from "@/hooks/useThemeContext";
 import { useEffect, useRef } from "react";
@@ -127,7 +129,7 @@ const ClientsSection = () => {
 	}, []);
 
 	return (
-		<S.Container id='clients'>
+		<S.Container id="clients">
 			<S.Content>
 				<TitleSectionContent>Clientes</TitleSectionContent>
 
@@ -135,7 +137,7 @@ const ClientsSection = () => {
 					<S.CardInfoClient ref={cardInfo01Ref}>
 						<S.ImageInfo
 							src={maisClientes}
-							alt='icone que indica mais de 100 clientes'
+							alt="icone que indica mais de 100 clientes"
 						/>
 						<S.TitleSectionInfo>Mais de 100 Clientes</S.TitleSectionInfo>
 						<S.DescriptionSectionInfo>
@@ -146,7 +148,7 @@ const ClientsSection = () => {
 					<S.CardInfoClient ref={cardInfo02Ref}>
 						<S.ImageInfo
 							src={crescimento}
-							alt='icone que crecismento contínuo'
+							alt="icone que crecismento contínuo"
 						/>
 						<S.TitleSectionInfo>Crescimento Contínuo</S.TitleSectionInfo>
 						<S.DescriptionSectionInfo>
@@ -155,10 +157,7 @@ const ClientsSection = () => {
 					</S.CardInfoClient>
 
 					<S.CardInfoClient ref={cardInfo03Ref}>
-						<S.ImageInfo
-							src={satisfacao}
-							alt='icone que indica satisfação'
-						/>
+						<S.ImageInfo src={satisfacao} alt="icone que indica satisfação" />
 						<S.TitleSectionInfo>Satisfação Garantida</S.TitleSectionInfo>
 						<S.DescriptionSectionInfo>
 							Satisfação com a qualidade e eficiência dos nossos serviços.
@@ -168,7 +167,7 @@ const ClientsSection = () => {
 
 				<S.Symbols
 					src={theme.title === "light" ? symbolsL : symbolsD}
-					alt='Símbolos da Sethe'
+					alt="Símbolos da Sethe"
 					ref={symbols01Ref}
 				/>
 
@@ -177,52 +176,31 @@ const ClientsSection = () => {
 						Clientes que confiam na sethe
 					</S.TitleClientsContainer>
 					<S.ClientsLogos>
-						<S.Client
-							src={mais1cafe}
-							alt='mais 1 café'
-						/>
-						<S.Client
-							src={potencial}
-							alt='Potencial Engenharia'
-						/>
-						<S.Client
-							src={pingo}
-							alt='pingo'
-						/>
-						<S.Client
-							src={rta}
-							alt='RTA'
-						/>
-						<S.Client
-							src={facilite}
-							alt='facilite'
-						/>
-						<S.Client
-							src={cecy}
-							alt='Cecy'
-						/>
-						<S.Client
-							src={oncobem}
-							alt='Oncobem'
-						/>
-						<S.Client
-							src={seEng}
-							alt='SE Engenharia'
-						/>
-						<S.Client
-							src={serveFacil}
-							alt='Serve Fácil'
-						/>
-						<S.Client
-							src={logoUltraX}
-							alt='logo ultra x'
-						/>
+						<S.Client src={mais1cafe} alt="mais 1 café" />
+						<S.Client src={potencial} alt="Potencial Engenharia" />
+						<S.Client src={pingo} alt="pingo" />
+						<S.Client src={rta} alt="RTA" />
+						<S.Client src={facilite} alt="facilite" />
+						<S.Client src={cecy} alt="Cecy" />
+						<S.Client src={oncobem} alt="Oncobem" />
+						<S.Client src={seEng} alt="SE Engenharia" />
+						<S.Client src={serveFacil} alt="Serve Fácil" />
+						<S.Client src={logoUltraX} alt="logo ultra x" />
 					</S.ClientsLogos>
 				</S.ClientsContainer>
 
+				<S.PartnersContainer ref={clientsRef}>
+					<S.TitleClientsContainer>Parceiros</S.TitleClientsContainer>
+					<S.ClientsLogos>
+						<Link href="http://www.finep.gov.br/" target="_blank">
+							<S.Client src={finep} alt="FINEP" />
+						</Link>
+					</S.ClientsLogos>
+				</S.PartnersContainer>
+
 				<S.Symbols
 					src={theme.title === "light" ? symbolsL : symbolsD}
-					alt='Símbolos da Sethe'
+					alt="Símbolos da Sethe"
 					ref={symbols02Ref}
 				/>
 			</S.Content>
